@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+    <url>
+      <loc>http://localhost:1313/docs/overview/</loc>
+      <lastmod>2023-09-07T16:06:50+02:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/docs/ly-thuyet/</loc>
+      <lastmod>2023-09-07T16:12:37+02:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/docs/thuc-hanh/</loc>
+      <lastmod>2023-09-07T16:12:37+02:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/docs/resources/</loc>
+      <lastmod>2024-02-27T09:30:56+01:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://localhost:1313/docs/overview/l%E1%BB%9Di-m%E1%BB%9F-%C4%91%E1%BA%A7u/</loc>
+        <lastmod>2023-09-07T16:04:48+02:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/docs/ly-thuyet/%C4%91i%E1%BB%87n-to%C3%A1n-%C4%91%C3%A1m-m%C3%A2y/</loc>
+        <lastmod>2023-09-07T16:13:18+02:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/docs/ly-thuyet/h%E1%BA%A1-t%E1%BA%A7ng-to%C3%A0n-c%E1%BA%A7u-c%E1%BB%A7a-aws/</loc>
+        <lastmod>2023-09-07T16:13:18+02:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/docs/thuc-hanh/th%E1%BB%B1c-h%C3%A0nh-l%E1%BA%A7n-1/</loc>
+        <lastmod>2023-09-07T16:13:18+02:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      </urlset>

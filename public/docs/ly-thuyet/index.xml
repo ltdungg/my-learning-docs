@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lý thuyết on Dũng&#39;s Blog</title>
+    <link>http://localhost:1313/docs/ly-thuyet/</link>
+    <description>Recent content in Lý thuyết on Dũng&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>Copyright (c) 2020-2024 Thulite</copyright>
+    <lastBuildDate>Thu, 07 Sep 2023 16:13:18 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/docs/ly-thuyet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Điện toán đám mây</title>
+      <link>http://localhost:1313/docs/ly-thuyet/%C4%91i%E1%BB%87n-to%C3%A1n-%C4%91%C3%A1m-m%C3%A2y/</link>
+      <pubDate>Thu, 07 Sep 2023 16:13:18 +0200</pubDate>
+      <guid>http://localhost:1313/docs/ly-thuyet/%C4%91i%E1%BB%87n-to%C3%A1n-%C4%91%C3%A1m-m%C3%A2y/</guid>
+      <description>&lt;h3 id=&#34;điện-toán-đám-mây-là-gì&#34;&gt;Điện toán đám mây là gì?&lt;/h3&gt;&#xA;&lt;p&gt;Điện toán đám mây là việc phân phối các tài nguyên CNTT theo nhu cầu qua internet&#xA;với &lt;span style=&#34;color: orange; font-weight:bold;&#34;&gt;chính sách thanh toán theo mức sử dụng.&lt;/span&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hạ tầng toàn cầu của AWS</title>
+      <link>http://localhost:1313/docs/ly-thuyet/h%E1%BA%A1-t%E1%BA%A7ng-to%C3%A0n-c%E1%BA%A7u-c%E1%BB%A7a-aws/</link>
+      <pubDate>Thu, 07 Sep 2023 16:13:18 +0200</pubDate>
+      <guid>http://localhost:1313/docs/ly-thuyet/h%E1%BA%A1-t%E1%BA%A7ng-to%C3%A0n-c%E1%BA%A7u-c%E1%BB%A7a-aws/</guid>
+      <description>&lt;h3 id=&#34;trung-tâm-dữ-liệu-của-aws-data-center&#34;&gt;Trung tâm dữ liệu của AWS (Data Center)&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Một trung tâm dữ liệu có thể chứa hàng chục ngàn máy chủ.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
