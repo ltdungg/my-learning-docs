@@ -16,22 +16,15 @@
 #   identifier = "Lời mở đầu"
 #   url = "/docs/lorem/"
 
-[[guide]]
-  name = "Lorem"
-  weight = 10
-  identifier = "lorem"
-  url = "/guide/lorem/"
-
-[[tutorial]]
-  name = "Lorem"
-  weight = 10
-  identifier = "lorem"
-  url = "/tutorial/lorem/"
-
 [[main]]
-  name = "Tài liệu"
+  name = "Tài liệu AWS"
   url = "/docs/overview/lời-mở-đầu/"
 # url = "/docs/1.0/prologue/introduction/"
+  weight = 10
+
+[[main]]
+  name = "Tài liệu Spark"
+  url = "/spark-docs/spark/khai-niem/"
   weight = 10
 
 [[main]]

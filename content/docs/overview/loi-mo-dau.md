@@ -14,6 +14,7 @@ seo:
   robots: "" # custom robot tags (optional)
 ---
 
-aa  
+#### Giới thiệu bản thân
 
-
+Xin chào mình tên là Lương Tiến Dũng. Là sinh viên công nghệ thông tin năm thứ 2 tại trường đại học Giao thông Vận tải.
+Đang theo đuổi con đường trở thành một Data Engineer.

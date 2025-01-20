@@ -2,74 +2,81 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kho kiến thức của Dũng on Dũng&#39;s Blog</title>
-    <link>http://localhost:1313/</link>
+    <link>http://localhost:10672/</link>
     <description>Recent content in Kho kiến thức của Dũng on Dũng&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Copyright (c) 2020-2024 Thulite</copyright>
     <lastBuildDate>Tue, 27 Feb 2024 09:30:56 +0100</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:10672/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Example Post</title>
-      <link>http://localhost:1313/blog/example-post/</link>
+      <link>http://localhost:10672/blog/example-post/</link>
       <pubDate>Thu, 07 Sep 2023 16:27:22 +0200</pubDate>
-      <guid>http://localhost:1313/blog/example-post/</guid>
+      <guid>http://localhost:10672/blog/example-post/</guid>
       <description>You can use blog posts for announcing product updates and features.</description>
     </item>
     <item>
-      <title>Lời mở đầu</title>
-      <link>http://localhost:1313/docs/overview/l%E1%BB%9Di-m%E1%BB%9F-%C4%91%E1%BA%A7u/</link>
+      <title>Khái niệm về Spark</title>
+      <link>http://localhost:10672/spark-docs/spark/khai-niem/</link>
       <pubDate>Thu, 07 Sep 2023 16:04:48 +0200</pubDate>
-      <guid>http://localhost:1313/docs/overview/l%E1%BB%9Di-m%E1%BB%9F-%C4%91%E1%BA%A7u/</guid>
-      <description>&lt;p&gt;aa&lt;/p&gt;</description>
+      <guid>http://localhost:10672/spark-docs/spark/khai-niem/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lời mở đầu</title>
+      <link>http://localhost:10672/docs/overview/l%E1%BB%9Di-m%E1%BB%9F-%C4%91%E1%BA%A7u/</link>
+      <pubDate>Thu, 07 Sep 2023 16:04:48 +0200</pubDate>
+      <guid>http://localhost:10672/docs/overview/l%E1%BB%9Di-m%E1%BB%9F-%C4%91%E1%BA%A7u/</guid>
+      <description>&lt;h4 id=&#34;giới-thiệu-bản-thân&#34;&gt;Giới thiệu bản thân&lt;/h4&gt;&#xA;&lt;p&gt;Xin chào mình tên là Lương Tiến Dũng. Là sinh viên công nghệ thông tin năm thứ 2 tại trường đại học Giao thông Vận tải.&#xA;Đang theo đuổi con đường trở thành một Data Engineer.&lt;/p&gt;</description>
     </item>
     <item>
       <title>1. Điện toán đám mây</title>
-      <link>http://localhost:1313/docs/ly-thuyet/1.-%C4%91i%E1%BB%87n-to%C3%A1n-%C4%91%C3%A1m-m%C3%A2y/</link>
+      <link>http://localhost:10672/docs/ly-thuyet/1.-%C4%91i%E1%BB%87n-to%C3%A1n-%C4%91%C3%A1m-m%C3%A2y/</link>
       <pubDate>Thu, 07 Sep 2023 16:13:18 +0200</pubDate>
-      <guid>http://localhost:1313/docs/ly-thuyet/1.-%C4%91i%E1%BB%87n-to%C3%A1n-%C4%91%C3%A1m-m%C3%A2y/</guid>
+      <guid>http://localhost:10672/docs/ly-thuyet/1.-%C4%91i%E1%BB%87n-to%C3%A1n-%C4%91%C3%A1m-m%C3%A2y/</guid>
       <description>&lt;h3 id=&#34;điện-toán-đám-mây-là-gì&#34;&gt;Điện toán đám mây là gì?&lt;/h3&gt;&#xA;&lt;p&gt;Điện toán đám mây là việc phân phối các tài nguyên CNTT theo nhu cầu qua internet&#xA;với &lt;span style=&#34;color: orange; font-weight:bold;&#34;&gt;chính sách thanh toán theo mức sử dụng.&lt;/span&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>2. Hạ tầng toàn cầu của AWS</title>
-      <link>http://localhost:1313/docs/ly-thuyet/2.-h%E1%BA%A1-t%E1%BA%A7ng-to%C3%A0n-c%E1%BA%A7u-c%E1%BB%A7a-aws/</link>
+      <link>http://localhost:10672/docs/ly-thuyet/2.-h%E1%BA%A1-t%E1%BA%A7ng-to%C3%A0n-c%E1%BA%A7u-c%E1%BB%A7a-aws/</link>
       <pubDate>Thu, 07 Sep 2023 16:13:18 +0200</pubDate>
-      <guid>http://localhost:1313/docs/ly-thuyet/2.-h%E1%BA%A1-t%E1%BA%A7ng-to%C3%A0n-c%E1%BA%A7u-c%E1%BB%A7a-aws/</guid>
+      <guid>http://localhost:10672/docs/ly-thuyet/2.-h%E1%BA%A1-t%E1%BA%A7ng-to%C3%A0n-c%E1%BA%A7u-c%E1%BB%A7a-aws/</guid>
       <description>&lt;h3 id=&#34;trung-tâm-dữ-liệu-của-aws-data-center&#34;&gt;Trung tâm dữ liệu của AWS (Data Center)&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Một trung tâm dữ liệu có thể chứa hàng chục ngàn máy chủ.&lt;/p&gt;</description>
     </item>
     <item>
       <title>3. Công cụ quản lý AWS Services</title>
-      <link>http://localhost:1313/docs/ly-thuyet/3.-c%C3%B4ng-c%E1%BB%A5-qu%E1%BA%A3n-l%C3%BD-aws-services/</link>
+      <link>http://localhost:10672/docs/ly-thuyet/3.-c%C3%B4ng-c%E1%BB%A5-qu%E1%BA%A3n-l%C3%BD-aws-services/</link>
       <pubDate>Thu, 07 Sep 2023 16:13:18 +0200</pubDate>
-      <guid>http://localhost:1313/docs/ly-thuyet/3.-c%C3%B4ng-c%E1%BB%A5-qu%E1%BA%A3n-l%C3%BD-aws-services/</guid>
+      <guid>http://localhost:10672/docs/ly-thuyet/3.-c%C3%B4ng-c%E1%BB%A5-qu%E1%BA%A3n-l%C3%BD-aws-services/</guid>
       <description>&lt;h3 id=&#34;aws-management-console---root-login&#34;&gt;AWS Management Console - Root Login&lt;/h3&gt;&#xA;&lt;p&gt;Chúng ta có thể login bằng tài khoản root hoặc bằng tài khoản IAM User (tài khoản con giúp quản lý truy xuất các tài nguyên của AWS)&#xA;&lt;br&gt; &lt;a href=&#34;https://aws.amazon.com/console/&#34;&gt;Link AWS Console&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>4. Tối ưu hóa chi phí trên AWS và Làm việc với AWS Support</title>
-      <link>http://localhost:1313/docs/ly-thuyet/4.-t%E1%BB%91i-%C6%B0u-h%C3%B3a-chi-ph%C3%AD-tr%C3%AAn-aws-v%C3%A0-l%C3%A0m-vi%E1%BB%87c-v%E1%BB%9Bi-aws-support/</link>
+      <link>http://localhost:10672/docs/ly-thuyet/4.-t%E1%BB%91i-%C6%B0u-h%C3%B3a-chi-ph%C3%AD-tr%C3%AAn-aws-v%C3%A0-l%C3%A0m-vi%E1%BB%87c-v%E1%BB%9Bi-aws-support/</link>
       <pubDate>Thu, 07 Sep 2023 16:13:18 +0200</pubDate>
-      <guid>http://localhost:1313/docs/ly-thuyet/4.-t%E1%BB%91i-%C6%B0u-h%C3%B3a-chi-ph%C3%AD-tr%C3%AAn-aws-v%C3%A0-l%C3%A0m-vi%E1%BB%87c-v%E1%BB%9Bi-aws-support/</guid>
-      <description>&lt;h3 id=&#34;tối-ưu-hóa-chi-phí-trên-aws&#34;&gt;Tối ưu hóa chi phí trên AWS&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Lựa chọn cấu hình tài nguyên tính toán và nơi lưu trữ dữ liệu phù hợp.&lt;/li&gt;&#xA;&lt;li&gt;Tận dụng các phương thức thanh toán giảm giá như &lt;span style=&#34;color: orange; font-weight:bold;&#34;&gt;reserved instance&lt;/span&gt;&#xA;, &lt;span style=&#34;color: orange; font-weight:bold;&#34;&gt;saving plan&lt;/span&gt;, &lt;span style=&#34;color: orange; font-weight:bold;&#34;&gt;spot&lt;/span&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Xoá các tài nguyên không sử dụng, bật tắt tự động các tài nguyên không cần chạy 24/7.&lt;/li&gt;&#xA;&lt;li&gt;Tận dụng các dịch vụ &lt;span style=&#34;color: orange; font-weight:bold;&#34;&gt;serverless&lt;/span&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      <guid>http://localhost:10672/docs/ly-thuyet/4.-t%E1%BB%91i-%C6%B0u-h%C3%B3a-chi-ph%C3%AD-tr%C3%AAn-aws-v%C3%A0-l%C3%A0m-vi%E1%BB%87c-v%E1%BB%9Bi-aws-support/</guid>
+      <description>&lt;h3 id=&#34;tối-ưu-hóa-chi-phí-trên-aws&#34;&gt;Tối ưu hóa chi phí trên AWS&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Lựa chọn cấu hình tài nguyên tính toán và nơi lưu trữ dữ liệu phù hợp.&lt;/li&gt;&#xA;&lt;li&gt;Tận dụng các phương thức thanh toán giảm giá như &lt;span style=&#34;color: orange; font-weight:bold;&#34;&gt;reserved instance&lt;/span&gt;&#xA;, &lt;span style=&#34;color: orange; font-weight:bold;&#34;&gt;saving plan&lt;/span&gt;, &lt;span style=&#34;color: orange; font-weight:bold;&#34;&gt;spot&lt;/span&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Xoá các tài nguyên không sử dụng, bật tắt tự động các tài nguyên không cần chạy 24/7.&lt;/li&gt;&#xA;&lt;li&gt;Tận dụng các dịch vụ &lt;span style=&#34;color: orange; font-weight:bold;&#34;&gt;serverless&lt;/span&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;thiết-kế-kiến-trúc-tối-ưu&#34;&gt;Thiết kế kiến trúc tối ưu&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Cài đặt và sử dụng &lt;span style=&#34;color: orange; font-weight:bold;&#34;&gt;AWS Budget&lt;/span&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Quản lý chi phí theo phòng ban / ứng dụng với &lt;span style=&#34;color: orange; font-weight:bold;&#34;&gt;cost allocation tag&lt;/span&gt;.&lt;/li&gt;&#xA;&lt;li&gt;&lt;span style=&#34;color: orange; font-weight:bold;&#34;&gt;Liên tục&lt;/span&gt; theo dõi và tối ưu hóa chi phí.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;công-cụ-tính-toán-chi-phí&#34;&gt;Công cụ tính toán chi phí&lt;/h3&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://calculator.aws/#/&#34;&gt;https://calculator.aws/#/&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Thực hành lần 1</title>
-      <link>http://localhost:1313/docs/thuc-hanh/th%E1%BB%B1c-h%C3%A0nh-l%E1%BA%A7n-1/</link>
+      <link>http://localhost:10672/docs/thuc-hanh/th%E1%BB%B1c-h%C3%A0nh-l%E1%BA%A7n-1/</link>
       <pubDate>Thu, 07 Sep 2023 16:13:18 +0200</pubDate>
-      <guid>http://localhost:1313/docs/thuc-hanh/th%E1%BB%B1c-h%C3%A0nh-l%E1%BA%A7n-1/</guid>
+      <guid>http://localhost:10672/docs/thuc-hanh/th%E1%BB%B1c-h%C3%A0nh-l%E1%BA%A7n-1/</guid>
       <description></description>
     </item>
     <item>
       <title>Resources</title>
-      <link>http://localhost:1313/docs/resources/</link>
+      <link>http://localhost:10672/docs/resources/</link>
       <pubDate>Tue, 27 Feb 2024 09:30:56 +0100</pubDate>
-      <guid>http://localhost:1313/docs/resources/</guid>
+      <guid>http://localhost:10672/docs/resources/</guid>
       <description>&lt;p&gt;Link to valuable, relevant resources.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Privacy Policy</title>
-      <link>http://localhost:1313/privacy/</link>
+      <link>http://localhost:10672/privacy/</link>
       <pubDate>Thu, 07 Sep 2023 17:19:07 +0200</pubDate>
-      <guid>http://localhost:1313/privacy/</guid>
+      <guid>http://localhost:10672/privacy/</guid>
       <description></description>
     </item>
   </channel>

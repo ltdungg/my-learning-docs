@@ -23,6 +23,7 @@ Chúng ta có thể login bằng tài khoản root hoặc bằng tài khoản IA
 
 <img src="/aws-console.png">
 
+
 ### AWS Management Console - IAM Login
 
 Khi login bằng IAM User chúng ta cần cung cấp thêm thông tin **Account ID** (Chuỗi 12 chữ số) để xác định account AWS

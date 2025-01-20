@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Giới thiệu on Dũng&#39;s Blog</title>
-    <link>http://localhost:1313/docs/overview/</link>
+    <link>http://localhost:10672/docs/overview/</link>
     <description>Recent content in Giới thiệu on Dũng&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Copyright (c) 2020-2024 Thulite</copyright>
     <lastBuildDate>Thu, 07 Sep 2023 16:04:48 +0200</lastBuildDate>
-    <atom:link href="http://localhost:1313/docs/overview/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:10672/docs/overview/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Lời mở đầu</title>
-      <link>http://localhost:1313/docs/overview/l%E1%BB%9Di-m%E1%BB%9F-%C4%91%E1%BA%A7u/</link>
+      <link>http://localhost:10672/docs/overview/l%E1%BB%9Di-m%E1%BB%9F-%C4%91%E1%BA%A7u/</link>
       <pubDate>Thu, 07 Sep 2023 16:04:48 +0200</pubDate>
-      <guid>http://localhost:1313/docs/overview/l%E1%BB%9Di-m%E1%BB%9F-%C4%91%E1%BA%A7u/</guid>
-      <description>&lt;p&gt;aa&lt;/p&gt;</description>
+      <guid>http://localhost:10672/docs/overview/l%E1%BB%9Di-m%E1%BB%9F-%C4%91%E1%BA%A7u/</guid>
+      <description>&lt;h4 id=&#34;giới-thiệu-bản-thân&#34;&gt;Giới thiệu bản thân&lt;/h4&gt;&#xA;&lt;p&gt;Xin chào mình tên là Lương Tiến Dũng. Là sinh viên công nghệ thông tin năm thứ 2 tại trường đại học Giao thông Vận tải.&#xA;Đang theo đuổi con đường trở thành một Data Engineer.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
