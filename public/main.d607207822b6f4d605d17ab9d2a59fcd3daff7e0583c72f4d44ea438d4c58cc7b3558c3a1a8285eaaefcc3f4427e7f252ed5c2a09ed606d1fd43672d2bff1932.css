@@ -13193,28 +13193,6 @@ details pre {
 .search-form label {
   font-weight: normal; }
 
-img {
-  height: auto;
-  max-width: 100%; }
-
-img, picture {
-  font-size: 0; }
-
-img[data-sizes="auto"] {
-  display: block; }
-
-.blur-up {
-  filter: blur(5px);
-  transition: filter 400ms; }
-
-.blur-up.lazyloaded {
-  filter: unset; }
-
-figcaption {
-  font-size: 1rem;
-  margin-top: 0.5rem;
-  font-style: italic; }
-
 .mermaid {
   margin: 1.5rem 0;
   padding: 1.5rem; }

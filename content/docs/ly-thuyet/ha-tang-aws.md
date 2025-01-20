@@ -25,7 +25,7 @@ seo:
 - Một <span style="color: orange; font-weight:bold;">Availability Zone</span> (AZ) bao gồm một hoặc nhiều trung tâm dữ liệu, các (AZ) được thiết kế để không
 xảy ra sự cố ảnh hưởng đồng thời 2 AZ một lúc (<span style="color: orange; font-weight:bold;">fault isolation</span>)
 
-<img src="/images/az.png">
+![region](images/az.png)
 <br> <br>
 
 - Giữa 2 AZ là đường kết nối riêng tốc độ cao
@@ -36,7 +36,7 @@ xảy ra sự cố ảnh hưởng đồng thời 2 AZ một lúc (<span style="c
 - Các Region được kết ối với nhau bởi mạng backbone của AWS.
 - Mặc định dữ liệu và dịch vụ ở các Region độc ập với nhau. (Trừ một số dịch vụ quy mô Global)
 
-<img src="/images/region.png">
+![region](images/region.png)
 <br>
 
 ### Edge Locations

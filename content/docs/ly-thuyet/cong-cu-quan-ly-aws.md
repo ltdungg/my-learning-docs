@@ -21,7 +21,7 @@ seo:
 Chúng ta có thể login bằng tài khoản root hoặc bằng tài khoản IAM User (tài khoản con giúp quản lý truy xuất các tài nguyên của AWS)
  <br> [Link AWS Console](https://aws.amazon.com/console/)
 
-<img src="/images/aws-console.png">
+![region](images/aws-console.png)
 
 
 ### AWS Management Console - IAM Login
