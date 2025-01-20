@@ -50,7 +50,8 @@
 <meta property="og:url" content="http://localhost:1313/docs/ly-thuyet/h%E1%BA%A1-t%E1%BA%A7ng-to%C3%A0n-c%E1%BA%A7u-c%E1%BB%A7a-aws/">
   <meta property="og:site_name" content="Dũng&#39;s Blog">
   <meta property="og:title" content="Hạ tầng toàn cầu của AWS">
-  <meta property="og:description" content="Trung tâm dữ liệu của AWS (Data Center) Một trung tâm dữ liệu có thể chứa hàng chục ngàn máy chủ.">
+  <meta property="og:description" content="–
+Trung tâm dữ liệu của AWS (Data Center) Một trung tâm dữ liệu có thể chứa hàng chục ngàn máy chủ.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="docs">
@@ -61,7 +62,8 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="http://localhost:1313/cover.png">
   <meta name="twitter:title" content="Hạ tầng toàn cầu của AWS">
-  <meta name="twitter:description" content="Trung tâm dữ liệu của AWS (Data Center) Một trung tâm dữ liệu có thể chứa hàng chục ngàn máy chủ.">
+  <meta name="twitter:description" content="–
+Trung tâm dữ liệu của AWS (Data Center) Một trung tâm dữ liệu có thể chứa hàng chục ngàn máy chủ.">
       <meta name="twitter:site" content="@getdoks">
 
     
@@ -168,7 +170,11 @@
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/docs/ly-thuyet/%C4%91i%E1%BB%87n-to%C3%A1n-%C4%91%C3%A1m-m%C3%A2y/">Điện toán đám mây</a>
+      <a href="/docs/ly-thuyet/1.-%C4%91i%E1%BB%87n-to%C3%A1n-%C4%91%C3%A1m-m%C3%A2y/">1. Điện toán đám mây</a>
+  </li>
+
+  <li>
+      <a href="/docs/ly-thuyet/3.-c%C3%B4ng-c%E1%BB%A5-qu%E1%BA%A3n-l%C3%BD-aws-services/">3. Công cụ quản lý AWS Services</a>
   </li>
 
   <li class="active" >
@@ -344,7 +350,11 @@
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/docs/ly-thuyet/%C4%91i%E1%BB%87n-to%C3%A1n-%C4%91%C3%A1m-m%C3%A2y/">Điện toán đám mây</a>
+      <a href="/docs/ly-thuyet/1.-%C4%91i%E1%BB%87n-to%C3%A1n-%C4%91%C3%A1m-m%C3%A2y/">1. Điện toán đám mây</a>
+  </li>
+
+  <li>
+      <a href="/docs/ly-thuyet/3.-c%C3%B4ng-c%E1%BB%A5-qu%E1%BA%A3n-l%C3%BD-aws-services/">3. Công cụ quản lý AWS Services</a>
   </li>
 
   <li class="active" >
@@ -381,6 +391,8 @@
       <ul>
         <li><a href="#trung-tâm-dữ-liệu-của-aws-data-center">Trung tâm dữ liệu của AWS (Data Center)</a></li>
         <li><a href="#availability-zone">Availability Zone</a></li>
+        <li><a href="#region">Region</a></li>
+        <li><a href="#edge-locations">Edge Locations</a></li>
       </ul>
     </li>
   </ul>
@@ -402,6 +414,8 @@
       <ul>
         <li><a href="#trung-tâm-dữ-liệu-của-aws-data-center">Trung tâm dữ liệu của AWS (Data Center)</a></li>
         <li><a href="#availability-zone">Availability Zone</a></li>
+        <li><a href="#region">Region</a></li>
+        <li><a href="#edge-locations">Edge Locations</a></li>
       </ul>
     </li>
   </ul>
@@ -410,7 +424,8 @@
   </details>
 
 			</nav>
-			<h3 id="trung-tâm-dữ-liệu-của-aws-data-center">Trung tâm dữ liệu của AWS (Data Center)<a href="#trung-tâm-dữ-liệu-của-aws-data-center" class="anchor" aria-hidden="true">#</a> </h3>
+			<p>&ndash;</p>
+<h3 id="trung-tâm-dữ-liệu-của-aws-data-center">Trung tâm dữ liệu của AWS (Data Center)<a href="#trung-tâm-dữ-liệu-của-aws-data-center" class="anchor" aria-hidden="true">#</a> </h3>
 <ul>
 <li>
 <p>Một trung tâm dữ liệu có thể chứa hàng chục ngàn máy chủ.</p>
@@ -424,6 +439,31 @@
 <ul>
 <li>Một <span style="color: orange; font-weight:bold;">Availability Zone</span> (AZ) bao gồm một hoặc nhiều trung tâm dữ liệu, các (AZ) được thiết kế để không
 xảy ra sự cố ảnh hưởng đồng thời 2 AZ một lúc (<span style="color: orange; font-weight:bold;">fault isolation</span>)</li>
+</ul>
+<img src="/az.png">
+<br> <br>
+<ul>
+<li>Giữa 2 AZ là đường kết nối riêng tốc độ cao</li>
+<li><span style="color: orange; font-weight:bold;">AWS khuyến nghị nên triển khai ứng dụng tối thiểu trên 2 AZ</span></li>
+</ul>
+<h3 id="region">Region<a href="#region" class="anchor" aria-hidden="true">#</a> </h3>
+<ul>
+<li>Một AWS <span style="color: orange; font-weight:bold;">Region</span> bao gồm <span style="color: orange; font-weight:bold;">tối thiểu 3 Availability Zone</span>. Hiện tại có hơn 25 Region trên toàn cầu.</li>
+<li>Các Region được kết ối với nhau bởi mạng backbone của AWS.</li>
+<li>Mặc định dữ liệu và dịch vụ ở các Region độc ập với nhau. (Trừ một số dịch vụ quy mô Global)</li>
+</ul>
+<img src="/region.png">
+<br>
+<h3 id="edge-locations">Edge Locations<a href="#edge-locations" class="anchor" aria-hidden="true">#</a> </h3>
+<ul>
+<li>Là mạng lưới trung tâm dữ liệu AWS được thiết kế để cung cấp dịch vụ với độ trễ thấp nhất có thể.</li>
+<li>Các dịch vụ AWS hoạt động tại Edge Locations (POP) bao gồm
+<ul>
+<li>CloudFront (CDN)</li>
+<li>Web Application Firewall (WAF)</li>
+<li>Route 53 (DNS Servic</li>
+</ul>
+</li>
 </ul>
 
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
@@ -442,7 +482,7 @@ xảy ra sự cố ảnh hưởng đồng thời 2 AZ một lúc (<span style="c
 				</div>
 				<div class="d-flex flex-column">
 					<div class="text-body-secondary">Prev</div>
-					<a href="/docs/ly-thuyet/%C4%91i%E1%BB%87n-to%C3%A1n-%C4%91%C3%A1m-m%C3%A2y/" class="stretched-link text-reset text-decoration-none">Điện toán đám mây</a>
+					<a href="/docs/ly-thuyet/3.-c%C3%B4ng-c%E1%BB%A5-qu%E1%BA%A3n-l%C3%BD-aws-services/" class="stretched-link text-reset text-decoration-none">3. Công cụ quản lý AWS Services</a>
 				</div>
 			</div>
 		</div>
