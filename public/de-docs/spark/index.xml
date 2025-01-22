@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mở đầu về Spark on Dũng&#39;s Blog</title>
+    <link>http://localhost:1313/de-docs/spark/</link>
+    <description>Recent content in Mở đầu về Spark on Dũng&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>Copyright (c) 2020-2024 Thulite</copyright>
+    <lastBuildDate>Thu, 07 Sep 2023 16:04:48 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/de-docs/spark/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1. Giới thiệu về Spark</title>
+      <link>http://localhost:1313/de-docs/spark/khai-niem/</link>
+      <pubDate>Thu, 07 Sep 2023 16:04:48 +0200</pubDate>
+      <guid>http://localhost:1313/de-docs/spark/khai-niem/</guid>
+      <description>&lt;style&gt;body {text-align: justify}&lt;/style&gt;&#xD;&#xA;&lt;h3 id=&#34;spark-là-gì&#34;&gt;Spark là gì?&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;span style=&#34;color: orange; font-weight:bold;&#34;&gt;Apache Spark&lt;/span&gt; là một hệ thống xử lý dữ liệu phân tán mã nguồn mở và được sử dụng cho các công việc xử lý dữ liệu lớn.&lt;/li&gt;&#xA;&lt;li&gt;Có thể sử dụng trên: &lt;span style=&#34;color: orange; font-weight:bold;&#34;&gt;on premises&lt;/span&gt; hay &lt;span style=&#34;color: orange; font-weight:bold;&#34;&gt;trên cloud&lt;/span&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Spark sử dụng khả năng lưu trữ và xử lý dữ liệu trên bộ nhớ thay vì sử dụng ổ cứng (HDD/SSD).&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Làm tăng khả năng xử lý dữ liệu, khả năng xử lý nhanh hơn Hadoop MapReduce.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;span style=&#34;color: orange; font-weight:bold;&#34;&gt;Apache Spark&lt;/span&gt; cung cấp API phát triển bằng ngôn ngữ Python, Scala, Java. Có thể sử dụng cho việc:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Machine Learning (MLlib).&lt;/li&gt;&#xA;&lt;li&gt;Truy vấn, tương tác với dữ liệu (Spark SQL).&lt;/li&gt;&#xA;&lt;li&gt;Xử lý dữ liệu thời gian thực (Structured Streaming).&lt;/li&gt;&#xA;&lt;li&gt;Xử lý đồ thị (GraphX).&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Spark được thiết kế xung quanh 4 triết lý chính:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Tốc độ (Speed)&lt;/li&gt;&#xA;&lt;li&gt;Dễ sử dụng (Ease of use)&lt;/li&gt;&#xA;&lt;li&gt;Tính mô đun (Modularity)&lt;/li&gt;&#xA;&lt;li&gt;Khả năng mở rộng (Extensibility)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Spark có cộng đồng lớn và một danh sách các gói third-party Spark là một phần của sự phát triển của cộng đồng.&#xA;&lt;br&gt; &lt;br&gt;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;img&#xD;&#xA;  src=&#34;http://localhost:1313/de-docs/spark/images/spark-third-party_hu15587626843367224303.webp&#34;&#xD;&#xA;  width=&#34;940&#34;&#xD;&#xA;  height=&#34;701&#34;&#xD;&#xA;  decoding=&#34;async&#34;&#xD;&#xA;  fetchpriority=&#34;auto&#34;&#xD;&#xA;  loading=&#34;lazy&#34;&#xD;&#xA;  alt=&#34;spark-third-party&#34;id=&#34;h-rh-i-0&#34;&#xD;&#xA;/&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>2. Thành phần của Spark</title>
+      <link>http://localhost:1313/de-docs/spark/thanh-phan-cua-spark/</link>
+      <pubDate>Thu, 07 Sep 2023 16:04:48 +0200</pubDate>
+      <guid>http://localhost:1313/de-docs/spark/thanh-phan-cua-spark/</guid>
+      <description>&lt;style&gt;body {text-align: justify}&lt;/style&gt;&#xD;&#xA;&lt;p&gt;&lt;br&gt;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;img&#xD;&#xA;  src=&#34;http://localhost:1313/de-docs/spark/images/spark-components_hu5920700851516503745.webp&#34;&#xD;&#xA;  width=&#34;1314&#34;&#xD;&#xA;  height=&#34;391&#34;&#xD;&#xA;  decoding=&#34;async&#34;&#xD;&#xA;  fetchpriority=&#34;auto&#34;&#xD;&#xA;  loading=&#34;lazy&#34;&#xD;&#xA;  alt=&#34;Spark Components&#34;id=&#34;h-rh-i-0&#34;&#xD;&#xA;/&gt;&lt;/p&gt;&#xA;&lt;p&gt;Spark bao gồm 5 thành phần chính: Spark Core, Spark SQL, Spark Streaming, MLlib và GraphX.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>3. Cách Spark hoạt động</title>
+      <link>http://localhost:1313/de-docs/spark/cach-hoat-dong/</link>
+      <pubDate>Thu, 07 Sep 2023 16:04:48 +0200</pubDate>
+      <guid>http://localhost:1313/de-docs/spark/cach-hoat-dong/</guid>
+      <description>&lt;style&gt;body {text-align: justify}&lt;/style&gt;&#xD;&#xA;&lt;p&gt;Hãy bắt đầu bằng cách nhìn từng thành phần của Spark trong ảnh.&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;img&#xD;&#xA;  src=&#34;http://localhost:1313/de-docs/spark/images/architecture_hu4005592828857137198.webp&#34;&#xD;&#xA;  width=&#34;724&#34;&#xD;&#xA;  height=&#34;372&#34;&#xD;&#xA;  decoding=&#34;async&#34;&#xD;&#xA;  fetchpriority=&#34;auto&#34;&#xD;&#xA;  loading=&#34;lazy&#34;&#xD;&#xA;  alt=&#34;Architecture&#34;id=&#34;h-rh-i-0&#34;&#xD;&#xA;/&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;spark-driver&#34;&gt;Spark Driver&lt;/h3&gt;&#xA;&lt;p&gt;Là một phần của Spark application chịu trách nhiệm cho việc khởi tạo SparkSession.&#xA;Spark Driver có nhiều vai trò như:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>4. Các khái niệm Spark Application</title>
+      <link>http://localhost:1313/de-docs/spark/spark-application-concept/</link>
+      <pubDate>Thu, 07 Sep 2023 16:04:48 +0200</pubDate>
+      <guid>http://localhost:1313/de-docs/spark/spark-application-concept/</guid>
+      <description>&lt;style&gt;body {text-align: justify}&lt;/style&gt;&#xD;&#xA;&lt;h3 id=&#34;một-số-khái-niệm-cần-biết&#34;&gt;Một số khái niệm cần biết:&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;&lt;em&gt;Application:&lt;/em&gt;&lt;/strong&gt;&#xA;&lt;br&gt;&#xA;Một chương trình người dùng được xây dựng trên Spark và sử dụng API của nó. Bao gồm chương trình điều khiển (driver program) và executors trong cụm.&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;strong&gt;&lt;em&gt;SparkSession&lt;/em&gt;&lt;/strong&gt;&#xA;&lt;br&gt;&#xA;Một đối tượng cung cấp điểm vào để tương tác với các chức năng của Spark.&#xA;Trong Spark Shell đã cung cấp sẵn SparkSession cho bạn nhưng trong Spark Application, bạn phải tự tạo SparkSession riêng.&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;strong&gt;&lt;em&gt;Job&lt;/em&gt;&lt;/strong&gt;&#xA;&lt;br&gt;&#xA;Một chương chình tính toán song song bao gồm nhiều tác vụ được tạo ra để phản hồi cho một Spark action (ví dụ: save(), collect())&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;strong&gt;&lt;em&gt;Stage&lt;/em&gt;&lt;/strong&gt;&#xA;&lt;br&gt;&#xA;Mỗi job được phân chia thành các tác vụ nhỏ hơn được gọi là stages, chúng phụ thuộc lẫn nhau.&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;strong&gt;&lt;em&gt;Task&lt;/em&gt;&lt;/strong&gt;&#xA;&lt;br&gt;&#xA;Một đơn vị công việc (work) hay thực thi (executor) được gửi cho Spark Executor.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

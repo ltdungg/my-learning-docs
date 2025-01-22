@@ -12,7 +12,7 @@ seo:
   canonical: "" # custom canonical URL (optional)
   robots: "" # custom robot tags (optional)
 ---
-
+<style>body {text-align: justify}</style>
 [//]: # (<span style="color: orange; font-weight:bold;"></span>)
 
 ### AWS Management Console - Root Login

@@ -23,8 +23,8 @@
   weight = 10
 
 [[main]]
-  name = "Tài liệu Spark"
-  url = "/spark-docs/spark/khai-niem/"
+  name = "Tài liệu Data Engineer"
+  url = "/de-docs/overview/loi-mo-dau/"
   weight = 10
 
 [[main]]
@@ -56,9 +56,9 @@
 #   pageRef = "/docs/overview"
 #   weight = 10
 #
-# [[sidebar_docs]]
-#   name = "Reference"
-#   pageRef = "/docs/ly-thuyet"
+# [[sidebar_de-docs]]
+#   name = "Lời mở đầu"
+#   pageRef = "/de-docs/overiew"
 #   weight = 20
 #
 # [[sidebar_docs]]

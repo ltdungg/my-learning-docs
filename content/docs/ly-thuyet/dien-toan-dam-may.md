@@ -12,7 +12,7 @@ seo:
   canonical: "" # custom canonical URL (optional)
   robots: "" # custom robot tags (optional)
 ---
-
+<style>body {text-align: justify}</style>
 ### Điện toán đám mây là gì?
 Điện toán đám mây là việc phân phối các tài nguyên CNTT theo nhu cầu qua internet
 với <span style="color: orange; font-weight:bold;">chính sách thanh toán theo mức sử dụng.</span>

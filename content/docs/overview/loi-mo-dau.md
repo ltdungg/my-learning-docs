@@ -13,7 +13,7 @@ seo:
   canonical: "" # custom canonical URL (optional)
   robots: "" # custom robot tags (optional)
 ---
-
+<style>body {text-align: justify}</style>
 #### Giới thiệu bản thân
 
 Xin chào mình tên là Lương Tiến Dũng. Là sinh viên công nghệ thông tin năm thứ 2 tại trường đại học Giao thông Vận tải.

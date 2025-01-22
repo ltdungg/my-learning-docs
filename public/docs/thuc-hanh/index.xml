@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Thực hành on Dũng&#39;s Blog</title>
-    <link>http://localhost:10672/docs/thuc-hanh/</link>
+    <link>http://localhost:1313/docs/thuc-hanh/</link>
     <description>Recent content in Thực hành on Dũng&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Copyright (c) 2020-2024 Thulite</copyright>
-    <lastBuildDate>Thu, 07 Sep 2023 16:13:18 +0200</lastBuildDate>
-    <atom:link href="http://localhost:10672/docs/thuc-hanh/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Jan 2025 05:38:29 +0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/docs/thuc-hanh/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Thực hành lần 1</title>
-      <link>http://localhost:10672/docs/thuc-hanh/th%E1%BB%B1c-h%C3%A0nh-l%E1%BA%A7n-1/</link>
+      <link>http://localhost:1313/docs/thuc-hanh/th%E1%BB%B1c-h%C3%A0nh-l%E1%BA%A7n-1/</link>
       <pubDate>Thu, 07 Sep 2023 16:13:18 +0200</pubDate>
-      <guid>http://localhost:10672/docs/thuc-hanh/th%E1%BB%B1c-h%C3%A0nh-l%E1%BA%A7n-1/</guid>
-      <description></description>
+      <guid>http://localhost:1313/docs/thuc-hanh/th%E1%BB%B1c-h%C3%A0nh-l%E1%BA%A7n-1/</guid>
+      <description>&lt;style&gt;body {text-align: justify}&lt;/style&gt;</description>
     </item>
   </channel>
 </rss>

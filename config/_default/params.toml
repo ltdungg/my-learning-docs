@@ -4,7 +4,7 @@ description = "Congrats on setting up a new Doks project!"
 images = ["cover.png"]
 
 # mainSections
-mainSections = ["docs", "spark-docs"]
+mainSections = ["docs", "de-docs"]
 
 [social]
   twitter = "getdoks"
@@ -44,7 +44,7 @@ mainSections = ["docs", "spark-docs"]
   bootstrapJavascript = false # false (default) or true
 
   # Nav
-  sectionNav = ["docs", "spark-docs"] # ["docs"] (default) or list of sections (e.g. ["docs", "overview"])
+  sectionNav = ["docs", "de-docs"] # ["docs"] (default) or list of sections (e.g. ["docs", "overview"])
   toTopButton = false # false (default) or true
   breadcrumbTrail = false # false (default) or true
   headlineHash = true # true (default) or false
@@ -59,7 +59,7 @@ mainSections = ["docs", "spark-docs"]
   docsVersion = "1.0"
 
   # UX
-  headerBar = false # true (default) or false
+  headerBar = true # true (default) or false
   backgroundDots = true # true (default) or false
 
   # Homepage
@@ -87,10 +87,10 @@ mainSections = ["docs", "spark-docs"]
   # textLight = "#1d2d35" # "#1d2d35" (default), "#1d2d35" (orignal), or custom color
   # accentLight = "#8ed6fb" # "#8ed6fb" (default), "#8ed6fb" (orignal), or custom color
 
-  # [doks.menu]
-  #   [doks.menu.section]
-  #     auto = true # true (default) or false
-  #     collapsibleSidebar = true # true (default) or false
+#[doks.menu]
+# [doks.menu.section]
+#   auto = false # true (default) or false
+#   collapsibleSidebar = true # true (default) or false
 
 # Debug
 [render_hooks.image]

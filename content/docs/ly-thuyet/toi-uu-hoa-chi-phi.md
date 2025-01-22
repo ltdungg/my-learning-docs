@@ -12,7 +12,7 @@ seo:
   canonical: "" # custom canonical URL (optional)
   robots: "" # custom robot tags (optional)
 ---
-
+<style>body {text-align: justify}</style>
 [//]: # (<span style="color: orange; font-weight:bold;"></span>)
 
 ### Tối ưu hóa chi phí trên AWS
@@ -40,4 +40,5 @@ seo:
   - Developer (Dev/Test)
   - Business (Production)
   - Enterprise (Large Enterprise)
-- Có thể nâng cấp gói hỗ trợ  trong thời gian ngắn để đẩy nhanh tốc độ hỗ trợ khi có sự cố quan trọng cần xử lý nhanh.
+- Có thể nâng cấp gói hỗ trợ  trong thời gian ngắn để đẩy nhanh tốc độ hỗ trợ khi có sự
+cố quan trọng cần xử lý nhanh.
