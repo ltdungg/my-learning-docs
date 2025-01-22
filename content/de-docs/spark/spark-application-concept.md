@@ -93,3 +93,13 @@ filtered.count()
 # Output: 20
 ```
 
+### Narrow and Wide Transformations
+
+Transformations có thể phân loại thành: 
+- Narrow dependencies (Phụ thuộc hẹp): Bất kỳ Transformation nào mà không phải qua biến đổi mà đầu ra có thể được tính toán duy nhất từ partitions đầu vào.
+  - Ví dụ: filter(), contains() là narrow dependencies.
+- Wide dependencies (Phụ thuộc rộng): Ngược lại thì để thực hiện narrow dependencies thì các partitions được đọc, kết hợp lại và được ghi vào trong disk.
+  - Ví dụ: groupBy() , orderBy() 
+
+![alt](images/narrow-wide.png)
+Hình 6: Narrow vs Wide transformations.
