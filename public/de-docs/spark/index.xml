@@ -7,7 +7,7 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Copyright (c) 2020-2024 Thulite</copyright>
-    <lastBuildDate>Wed, 22 Jan 2025 11:11:41 +0700</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jan 2025 23:56:13 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/de-docs/spark/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>1. Giới thiệu về Spark</title>
@@ -36,6 +36,13 @@
       <pubDate>Thu, 07 Sep 2023 16:04:48 +0200</pubDate>
       <guid>http://localhost:1313/de-docs/spark/spark-application-concept/</guid>
       <description>&lt;style&gt;body {text-align: justify}&lt;/style&gt;&#xD;&#xA;&lt;h3 id=&#34;một-số-khái-niệm-cần-biết&#34;&gt;Một số khái niệm cần biết:&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;&lt;em&gt;Application:&lt;/em&gt;&lt;/strong&gt;&#xA;&lt;br&gt;&#xA;Một chương trình người dùng được xây dựng trên Spark và sử dụng API của nó. Bao gồm chương trình điều khiển (driver program) và executors trong cụm.&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;strong&gt;&lt;em&gt;SparkSession&lt;/em&gt;&lt;/strong&gt;&#xA;&lt;br&gt;&#xA;Một đối tượng cung cấp điểm vào để tương tác với các chức năng của Spark.&#xA;Trong Spark Shell đã cung cấp sẵn SparkSession cho bạn nhưng trong Spark Application, bạn phải tự tạo SparkSession riêng.&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;strong&gt;&lt;em&gt;Job&lt;/em&gt;&lt;/strong&gt;&#xA;&lt;br&gt;&#xA;Một chương chình tính toán song song bao gồm nhiều tác vụ được tạo ra để phản hồi cho một Spark action (ví dụ: save(), collect())&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;strong&gt;&lt;em&gt;Stage&lt;/em&gt;&lt;/strong&gt;&#xA;&lt;br&gt;&#xA;Mỗi job được phân chia thành các tác vụ nhỏ hơn được gọi là stages, chúng phụ thuộc lẫn nhau.&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;strong&gt;&lt;em&gt;Task&lt;/em&gt;&lt;/strong&gt;&#xA;&lt;br&gt;&#xA;Một đơn vị công việc (work) hay thực thi (executor) được gửi cho Spark Executor.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>5. DataFrame API</title>
+      <link>http://localhost:1313/de-docs/spark/dataframe-api/</link>
+      <pubDate>Thu, 07 Sep 2023 16:04:48 +0200</pubDate>
+      <guid>http://localhost:1313/de-docs/spark/dataframe-api/</guid>
+      <description>&lt;style&gt;body {text-align: justify}&lt;/style&gt;&#xD;&#xA;&lt;p&gt;Spark DataFrame được lấy cảm hứng từ pandas DataFrame về cấu trúc, định dạng và một số thao tác cụ thể. Ví dụ về một Spark DataFrame được hiển thị tại Hình 1.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
