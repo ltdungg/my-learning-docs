@@ -7,7 +7,7 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Copyright (c) 2020-2024 Thulite</copyright>
-    <lastBuildDate>Wed, 22 Jan 2025 23:56:13 +0700</lastBuildDate>
+    <lastBuildDate>Sun, 26 Jan 2025 23:09:23 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Example Post</title>
@@ -52,6 +52,13 @@
       <description>&lt;style&gt;body {text-align: justify}&lt;/style&gt;&#xD;&#xA;&lt;p&gt;Spark DataFrame được lấy cảm hứng từ pandas DataFrame về cấu trúc, định dạng và một số thao tác cụ thể. Ví dụ về một Spark DataFrame được hiển thị tại Hình 1.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>6. Một số thao tác với DataFrame</title>
+      <link>http://localhost:1313/de-docs/spark/common-dataframe-operation/</link>
+      <pubDate>Thu, 07 Sep 2023 16:04:48 +0200</pubDate>
+      <guid>http://localhost:1313/de-docs/spark/common-dataframe-operation/</guid>
+      <description>&lt;style&gt;body {text-align: justify}&lt;/style&gt;&#xD;&#xA;&lt;h3 id=&#34;dataframereader-và-dataframe-writer&#34;&gt;DataFrameReader và DataFrame Writer&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;DataFrameReader&lt;/strong&gt; cho phép bạn đọc data từ nhiều nguồn khác nhau vào DataFrame, ví dụ JSON, CSV, Parquet, Text, Arvo, ORC, &amp;hellip;&#xA;&lt;br&gt;&#xA;&lt;strong&gt;DataFrameWriter&lt;/strong&gt; cho phép bạn ghi DataFrame vào nguồn data dưới một định dạng cụ thể.&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;Cùng bắt đầu với một ví dụ, chúng ta sẽ đọc một file CSV lớn chứa dữ liệu từ San Franciso Fire Department calls. Bao gồm 28 cột và 4,380,660 records.&#xA;Dữ liệu bạn có thể tải &lt;a href=&#34;https://github.com/databricks/LearningSparkV2/tree/master&#34;&gt;tại đây&lt;/a&gt;. Với một lượng dữ liệu lớn thì việc tự định nghĩa schema mang lại hiệu quả tốt hơn so với Spark tự xác định schema.&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;Cùng xem cách để làm ví dụ này:&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Lời mở đầu</title>
       <link>http://localhost:1313/de-docs/overview/loi-mo-dau/</link>
       <pubDate>Thu, 07 Sep 2023 16:04:48 +0200</pubDate>
@@ -71,13 +78,6 @@
       <pubDate>Thu, 07 Sep 2023 16:13:18 +0200</pubDate>
       <guid>http://localhost:1313/docs/ly-thuyet/1.-%C4%91i%E1%BB%87n-to%C3%A1n-%C4%91%C3%A1m-m%C3%A2y/</guid>
       <description>&lt;style&gt;body {text-align: justify}&lt;/style&gt;&#xD;&#xA;&lt;h3 id=&#34;điện-toán-đám-mây-là-gì&#34;&gt;Điện toán đám mây là gì?&lt;/h3&gt;&#xA;&lt;p&gt;Điện toán đám mây là việc phân phối các tài nguyên CNTT theo nhu cầu qua internet&#xA;với &lt;span style=&#34;color: orange; font-weight:bold;&#34;&gt;chính sách thanh toán theo mức sử dụng.&lt;/span&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>2. Hạ tầng toàn cầu của AWS</title>
-      <link>http://localhost:1313/docs/ly-thuyet/2.-h%E1%BA%A1-t%E1%BA%A7ng-to%C3%A0n-c%E1%BA%A7u-c%E1%BB%A7a-aws/</link>
-      <pubDate>Thu, 07 Sep 2023 16:13:18 +0200</pubDate>
-      <guid>http://localhost:1313/docs/ly-thuyet/2.-h%E1%BA%A1-t%E1%BA%A7ng-to%C3%A0n-c%E1%BA%A7u-c%E1%BB%A7a-aws/</guid>
-      <description>&lt;style&gt;body {text-align: justify}&lt;/style&gt;&#xD;&#xA;&lt;h3 id=&#34;trung-tâm-dữ-liệu-của-aws-data-center&#34;&gt;Trung tâm dữ liệu của AWS (Data Center)&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Một trung tâm dữ liệu có thể chứa hàng chục ngàn máy chủ.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

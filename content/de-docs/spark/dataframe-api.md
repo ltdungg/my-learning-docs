@@ -219,3 +219,39 @@ Trong ví dụ cuối, col("Id".desc) và $"Id".desc đều giống nhau. Đều
 - Còn sử dụng $ trước tên cột sẽ chuyển đổi tên cột thành Column.
 
 ### Rows
+Một hàng trong Spark chứa một hay nhiều cột. Bạn có thể khởi tạo một Row trong Spark hay truy cập vào các field của nó bằng index bắt đầu từ 0:
+
+```scala
+// In Scala
+import org.apache.spark.sql.Row
+// Tạo một Row
+val blogRow = Row(6, "Reynold", "Xin", "https://tinyurl.6", 255568, "3/2/2015", Array("twitter", "LinkedIn"))
+
+// Truy cập bằng index
+scala> blogRow(1)
+res: Any = Reynold
+```
+```python
+# In Python
+from pyspark.sql import Row
+blog_row = Row(6, "Reynold", "Xin", "https://tinyurl.6", 255568, "3/2/2015",["twitter", "LinkedIn"])
+
+# Truy cập bằng index
+blog_row[1]
+> 'Reynold'
+
+```
+Row object có thể sử dụng để tạo DataFrame:
+```python
+# In Python
+rows = [Row("Matei Zaharia", "CA"), Row("Reynold Xin", "CA")]
+authors_df = spark.createDataFrame(rows, ["Authors", "State"])
+authors_df.show()
++-------------+-----+
+| Author      |State|
++-------------+-----+
+|Matei Zaharia| CA  |
+| Reynold Xin | CA  |
++-------------+-----+
+```
+

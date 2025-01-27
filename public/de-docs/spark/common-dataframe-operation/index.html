@@ -1,0 +1,809 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preload" href="http://localhost:1313/fonts/vendor/jost/jost-v4-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="http://localhost:1313/fonts/vendor/jost/jost-v4-latin-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="http://localhost:1313/fonts/vendor/jost/jost-v4-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+<script 
+  src="/js/color-mode.f14b3e296de1d0b69e75af684b62a4a912a2cadab04e36123407cd8388204f1d.js"
+  integrity="sha256-8Us&#43;KW3h0Laeda9oS2KkqRKiytqwTjYSNAfNg4ggTx0=">
+</script>
+
+
+<link rel="stylesheet" href="/main.063a2364eb8f0a48e6f24eac46a8b495d91b9bc47ab7c2040387ce5630f740fb383028ef88bc4a1ecfc51ce60bdb8431823c0df1b93f70c88496a58a967e957e.css" integrity="sha512-BjojZOuPCkjm8k6sRqi0ldkbm8R6t8IEA4fOVjD3QPs4MCjviLxKHs/FHOYL24QxgjwN8bk/cMiElqWKln6Vfg==" crossorigin="anonymous">
+
+<noscript><style>img.lazyload { display: none; }</style></noscript><base href="http://localhost:1313/de-docs/spark/common-dataframe-operation/">
+
+  <link rel="canonical" href="http://localhost:1313/de-docs/spark/common-dataframe-operation/">
+
+
+<title>6. Một số thao tác với DataFrame  |  Dũng&#39;s Blog</title>
+<meta name="description" content="Congrats on setting up a new Doks project!">
+
+    
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    
+      <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    
+      <link
+        rel="apple-touch-icon"
+        href="/apple-touch-icon.png"
+        sizes="180x180"
+        type="image/png"
+      >
+      <link
+        rel="icon"
+        href="/favicon-192x192.png"
+        sizes="192x192"
+        type="image/png"
+      >
+      <link
+        rel="icon"
+        href="/favicon-512x512.png"
+        sizes="512x512"
+        type="image/png"
+      >
+<link rel="manifest" href="/manifest.webmanifest">
+
+<meta property="og:url" content="http://localhost:1313/de-docs/spark/common-dataframe-operation/">
+  <meta property="og:site_name" content="Dũng&#39;s Blog">
+  <meta property="og:title" content="6. Một số thao tác với DataFrame">
+  <meta property="og:description" content="DataFrameReader và DataFrame Writer DataFrameReader cho phép bạn đọc data từ nhiều nguồn khác nhau vào DataFrame, ví dụ JSON, CSV, Parquet, Text, Arvo, ORC, … DataFrameWriter cho phép bạn ghi DataFrame vào nguồn data dưới một định dạng cụ thể. Cùng bắt đầu với một ví dụ, chúng ta sẽ đọc một file CSV lớn chứa dữ liệu từ San Franciso Fire Department calls. Bao gồm 28 cột và 4,380,660 records. Dữ liệu bạn có thể tải tại đây. Với một lượng dữ liệu lớn thì việc tự định nghĩa schema mang lại hiệu quả tốt hơn so với Spark tự xác định schema. Cùng xem cách để làm ví dụ này:">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="de-docs">
+    <meta property="article:published_time" content="2023-09-07T16:04:48+02:00">
+    <meta property="article:modified_time" content="2023-09-07T16:04:48+02:00">
+    <meta property="og:image" content="http://localhost:1313/cover.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/cover.png">
+  <meta name="twitter:title" content="6. Một số thao tác với DataFrame">
+  <meta name="twitter:description" content="DataFrameReader và DataFrame Writer DataFrameReader cho phép bạn đọc data từ nhiều nguồn khác nhau vào DataFrame, ví dụ JSON, CSV, Parquet, Text, Arvo, ORC, … DataFrameWriter cho phép bạn ghi DataFrame vào nguồn data dưới một định dạng cụ thể. Cùng bắt đầu với một ví dụ, chúng ta sẽ đọc một file CSV lớn chứa dữ liệu từ San Franciso Fire Department calls. Bao gồm 28 cột và 4,380,660 records. Dữ liệu bạn có thể tải tại đây. Với một lượng dữ liệu lớn thì việc tự định nghĩa schema mang lại hiệu quả tốt hơn so với Spark tự xác định schema. Cùng xem cách để làm ví dụ này:">
+      <meta name="twitter:site" content="@getdoks">
+
+    
+    
+    <script type="application/ld+json">
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/",
+       "name": "Kho Kiến Thức Của Dũng",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/de-docs/",
+       "name": "De Docs",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/de-docs/spark/",
+       "name": "Mở Đầu Về Spark",
+       "position": 3
+     },
+     {
+       "@type": "ListItem",
+       "name": "6. Một Số Thao Tác Với Data Frame",
+       "position": 4
+     }
+   ]
+ }
+</script>
+
+
+
+
+
+</head>
+
+  
+  <body class="single section de-docs" data-bs-spy="scroll" data-bs-target="#toc" data-bs-root-margin="0px 0px -60%" data-bs-smooth-scroll="true" tabindex="0">
+    <div class="sticky-top">
+<div class="header-bar"></div>
+<header class="navbar navbar-expand-lg">
+  <div class="container-lg">
+  
+    <a class="navbar-brand me-auto me-lg-3" href="/">Dũng&#39;s Blog</a>
+
+    
+    
+    <button type="button" id="searchToggleMobile" class="btn btn-link nav-link mx-2 d-lg-none" aria-label="Search website">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <circle cx="10" cy="10" r="7"></circle>
+        <line x1="21" y1="21" x2="15" y2="15"></line>
+      </svg>
+    </button>
+    
+    <button class="btn btn-link d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavSection" aria-controls="offcanvasNavSection" aria-label="Open section navigation menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots-vertical" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+        <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+        <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+      </svg>
+    </button>
+    <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasNavSection" aria-labelledby="offcanvasNavSectionLabel">
+      <div class="header-bar"></div>
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavSectionLabel">De docs</h5>
+        <button type="button" class="btn btn-link nav-link p-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="offcanvas-body">
+        <aside class="doks-sidebar mt-n3">
+          <nav id="doks-docs-nav" aria-label="Tertiary navigation">
+            
+  
+    
+<nav class="section-nav docs-links">
+  <ul class="list-unstyled">
+
+  <li>
+    <details open>
+      <summary>Giới thiệu</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/de-docs/overview/loi-mo-dau/">Lời mở đầu</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open open>
+      <summary>Mở đầu về Spark</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/de-docs/spark/khai-niem/">1. Giới thiệu về Spark</a>
+  </li>
+
+  <li>
+      <a href="/de-docs/spark/thanh-phan-cua-spark/">2. Thành phần của Spark</a>
+  </li>
+
+  <li>
+      <a href="/de-docs/spark/cach-hoat-dong/">3. Cách Spark hoạt động</a>
+  </li>
+
+  <li>
+      <a href="/de-docs/spark/spark-application-concept/">4. Các khái niệm Spark Application</a>
+  </li>
+
+  <li>
+      <a href="/de-docs/spark/dataframe-api/">5. DataFrame API</a>
+  </li>
+
+  <li class="active" >
+      <a aria-current="page" href="/de-docs/spark/common-dataframe-operation/">6. Một số thao tác với DataFrame</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+  </ul>
+</nav>
+
+  
+
+          </nav>
+        </aside>
+      </div>
+    </div>
+    
+    <button class="btn btn-link nav-link mx-2 order-3 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavMain" aria-controls="offcanvasNavMain" aria-label="Open main navigation menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <line x1="4" y1="8" x2="20" y2="8"></line>
+        <line x1="4" y1="16" x2="20" y2="16"></line>
+      </svg>
+    </button>
+
+    
+    <div class="offcanvas offcanvas-end h-auto" tabindex="-1" id="offcanvasNavMain" aria-labelledby="offcanvasNavMainLabel">
+      <div class="header-bar d-lg-none"></div>
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavMainLabel">Dũng&#39;s Blog</h5>
+        <button type="button" class="btn btn-link nav-link p-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+         </svg>
+        </button>
+      </div>
+      
+      <div class="offcanvas-body d-flex flex-column flex-lg-row justify-content-between">
+        <ul class="navbar-nav flex-grow-1"><li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/docs/overview/l%E1%BB%9Di-m%E1%BB%9F-%C4%91%E1%BA%A7u/">Tài liệu AWS</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/de-docs/overview/loi-mo-dau/">Tài liệu Data Engineer</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/blog/">Bài viết</a>
+              </li>
+            </ul>
+
+        
+        
+        <button type="button" id="searchToggleDesktop" class="btn btn-link nav-link p-2 d-none d-lg-block" aria-label="Search website">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <circle cx="10" cy="10" r="7"></circle>
+            <line x1="21" y1="21" x2="15" y2="15"></line>
+          </svg>
+        </button>
+        
+        
+        
+        <button id="buttonColorMode" class="btn btn-link mx-auto nav-link p-0 ms-lg-2 me-lg-1" type="button" aria-label="Toggle theme">
+          <svg data-bs-theme-value="dark" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+          </svg>
+          <svg data-bs-theme-value="light" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0m-5 0h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>
+          </svg>
+        </button>
+        
+        <ul id="socialMenu" class="nav mx-auto flex-row order-lg-4">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/ltdungg"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path></svg><small class="ms-2 visually-hidden">GitHub</small></a>
+            </li>
+          </ul>
+        
+        </div>
+    </div>
+
+    
+    </div>
+</header>
+</div>
+
+<div class="modal" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-fullscreen-md-down">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 visually-hidden" id="searchModalLabel">Search</h1>
+        <button type="button" class="btn-close visually-hidden" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="search-input flex-grow-1 d-none">
+          <form id="search-form" class="search-form" action="#" method="post" accept-charset="UTF-8" role="search">
+            <label for="query" class="visually-hidden">Search</label>
+            <div class="d-flex">
+              <input type="search" id="query" name="query" class="search-text form-control form-control-lg" placeholder="Search" aria-label="Search" maxlength="128" autocomplete="off">
+              <button type="button" class="btn btn-link text-decoration-none px-0 ms-3 d-md-none" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-body">
+        <p class="search-loading status message d-none mt-3 text-center">Loading search index…</p>
+        <p class="search-no-recent message d-none mt-3 text-center">No recent searches</p>
+        <p class="search-no-results message d-none mt-3 text-center">No results for "<strong><span class="query-no-results">Query here</span></strong>"</p>
+        <div id="searchResults" class="search-results"></div>
+        <template>
+          <article class="search-result list-view">
+            <div class="card my-3">
+              <div class="card-body">
+                <header>
+                  <h2 class="h5 title title-submitted mb-0"><a class="stretched-link text-decoration-none text-reset" href="#">Title here</a></h2>
+                  <div class="submitted d-none"><time class="created-date">Date here</time></div>
+                </header>
+                <div class="content">Summary here</div>
+              </div>
+            </div>
+          </article>
+        </template>
+      </div>
+      <div class="modal-footer">
+        <ul class="list-inline me-auto d-none d-md-block">
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Enter key" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M12 3.53088v3c0 1-1 2-2 2H4M7 11.53088l-3-3 3-3"></path></g></svg></kbd><span class="DocSearch-Label">to select</span></li>
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Arrow down" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M7.5 3.5v8M10.5 8.5l-3 3-3-3"></path></g></svg></kbd><kbd class="me-2"><svg width="15" height="15" aria-label="Arrow up" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M7.5 11.5v-8M10.5 6.5l-3-3-3 3"></path></g></svg></kbd><span class="DocSearch-Label">to navigate</span></li>
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Escape key" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M13.6167 8.936c-.1065.3583-.6883.962-1.4875.962-.7993 0-1.653-.9165-1.653-2.1258v-.5678c0-1.2548.7896-2.1016 1.653-2.1016.8634 0 1.3601.4778 1.4875 1.0724M9 6c-.1352-.4735-.7506-.9219-1.46-.8972-.7092.0246-1.344.57-1.344 1.2166s.4198.8812 1.3445.9805C8.465 7.3992 8.968 7.9337 9 8.5c.032.5663-.454 1.398-1.4595 1.398C6.6593 9.898 6 9 5.963 8.4851m-1.4748.5368c-.2635.5941-.8099.876-1.5443.876s-1.7073-.6248-1.7073-2.204v-.4603c0-1.0416.721-2.131 1.7073-2.131.9864 0 1.6425 1.031 1.5443 2.2492h-2.956"></path></g></svg></kbd><span class="DocSearch-Label">to close</span></li>
+        </ul>
+        <p class="d-md-none">Search by <a class="text-decoration-none" href="https://github.com/nextapps-de/flexsearch">FlexSearch</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="wrap container-lg" role="document">
+      <div class="content">
+      
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar docs-sidebar-offset d-none d-lg-block">
+			
+  
+    
+<nav class="section-nav docs-links">
+  <ul class="list-unstyled">
+
+  <li>
+    <details open>
+      <summary>Giới thiệu</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/de-docs/overview/loi-mo-dau/">Lời mở đầu</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open open>
+      <summary>Mở đầu về Spark</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/de-docs/spark/khai-niem/">1. Giới thiệu về Spark</a>
+  </li>
+
+  <li>
+      <a href="/de-docs/spark/thanh-phan-cua-spark/">2. Thành phần của Spark</a>
+  </li>
+
+  <li>
+      <a href="/de-docs/spark/cach-hoat-dong/">3. Cách Spark hoạt động</a>
+  </li>
+
+  <li>
+      <a href="/de-docs/spark/spark-application-concept/">4. Các khái niệm Spark Application</a>
+  </li>
+
+  <li>
+      <a href="/de-docs/spark/dataframe-api/">5. DataFrame API</a>
+  </li>
+
+  <li class="active" >
+      <a aria-current="page" href="/de-docs/spark/common-dataframe-operation/">6. Một số thao tác với DataFrame</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+  </ul>
+</nav>
+
+  
+
+		</div>
+		
+		<nav class="docs-toc docs-toc-offset d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="page-links">
+  <h3>On this page</h3>
+    <nav id="toc">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#dataframereader-và-dataframe-writer">DataFrameReader và DataFrame Writer</a></li>
+        <li><a href="#transformations-và-actions">Transformations và Actions</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9">
+		
+			<h1>6. Một số thao tác với DataFrame</h1>
+			
+			<nav class="toc-mobile d-xl-none" aria-label="Quaternary navigation">
+				<details>
+    <summary>On this page</summary>
+    <div class="page-links">
+      <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#dataframereader-và-dataframe-writer">DataFrameReader và DataFrame Writer</a></li>
+        <li><a href="#transformations-và-actions">Transformations và Actions</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+  </details>
+
+			</nav>
+			<style>body {text-align: justify}</style>
+<h3 id="dataframereader-và-dataframe-writer">DataFrameReader và DataFrame Writer<a href="#dataframereader-và-dataframe-writer" class="anchor" aria-hidden="true">#</a> </h3>
+<p><strong>DataFrameReader</strong> cho phép bạn đọc data từ nhiều nguồn khác nhau vào DataFrame, ví dụ JSON, CSV, Parquet, Text, Arvo, ORC, &hellip;
+<br>
+<strong>DataFrameWriter</strong> cho phép bạn ghi DataFrame vào nguồn data dưới một định dạng cụ thể.
+<br>
+<br>
+Cùng bắt đầu với một ví dụ, chúng ta sẽ đọc một file CSV lớn chứa dữ liệu từ San Franciso Fire Department calls. Bao gồm 28 cột và 4,380,660 records.
+Dữ liệu bạn có thể tải <a href="https://github.com/databricks/LearningSparkV2/tree/master">tại đây</a>. Với một lượng dữ liệu lớn thì việc tự định nghĩa schema mang lại hiệu quả tốt hơn so với Spark tự xác định schema.
+<br>
+<br>
+Cùng xem cách để làm ví dụ này:</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># In Python</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">pyspark.sql</span> <span class="kn">import</span> <span class="n">SparkSession</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">pyspark.sql.types</span> <span class="kn">import</span> <span class="o">*</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Định nghĩa schema theo cách lập trình</span>
+</span></span><span class="line"><span class="cl"><span class="n">fire_schema</span> <span class="o">=</span> <span class="n">StructType</span><span class="p">([</span><span class="n">StructField</span><span class="p">(</span><span class="s1">&#39;CallNumber&#39;</span><span class="p">,</span> <span class="n">IntegerType</span><span class="p">(),</span> <span class="kc">True</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                <span class="n">StructField</span><span class="p">(</span><span class="s1">&#39;UnitID&#39;</span><span class="p">,</span> <span class="n">StringType</span><span class="p">(),</span> <span class="kc">True</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                <span class="n">StructField</span><span class="p">(</span><span class="s1">&#39;IncidentNumber&#39;</span><span class="p">,</span> <span class="n">IntegerType</span><span class="p">(),</span> <span class="kc">True</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                <span class="n">StructField</span><span class="p">(</span><span class="s1">&#39;CallType&#39;</span><span class="p">,</span> <span class="n">StringType</span><span class="p">(),</span> <span class="kc">True</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                <span class="n">StructField</span><span class="p">(</span><span class="s1">&#39;CallDate&#39;</span><span class="p">,</span> <span class="n">StringType</span><span class="p">(),</span> <span class="kc">True</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                <span class="n">StructField</span><span class="p">(</span><span class="s1">&#39;WatchDate&#39;</span><span class="p">,</span> <span class="n">StringType</span><span class="p">(),</span> <span class="kc">True</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                <span class="n">StructField</span><span class="p">(</span><span class="s1">&#39;CallFinalDisposition&#39;</span><span class="p">,</span> <span class="n">StringType</span><span class="p">(),</span> <span class="kc">True</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                <span class="n">StructField</span><span class="p">(</span><span class="s1">&#39;AvailableDtTm&#39;</span><span class="p">,</span> <span class="n">StringType</span><span class="p">(),</span> <span class="kc">True</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                <span class="n">StructField</span><span class="p">(</span><span class="s1">&#39;Address&#39;</span><span class="p">,</span> <span class="n">StringType</span><span class="p">(),</span> <span class="kc">True</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                <span class="n">StructField</span><span class="p">(</span><span class="s1">&#39;City&#39;</span><span class="p">,</span> <span class="n">StringType</span><span class="p">(),</span> <span class="kc">True</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                <span class="n">StructField</span><span class="p">(</span><span class="s1">&#39;Zipcode&#39;</span><span class="p">,</span> <span class="n">IntegerType</span><span class="p">(),</span> <span class="kc">True</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                <span class="n">StructField</span><span class="p">(</span><span class="s1">&#39;Battalion&#39;</span><span class="p">,</span> <span class="n">StringType</span><span class="p">(),</span> <span class="kc">True</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                <span class="n">StructField</span><span class="p">(</span><span class="s1">&#39;StationArea&#39;</span><span class="p">,</span> <span class="n">StringType</span><span class="p">(),</span> <span class="kc">True</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                <span class="n">StructField</span><span class="p">(</span><span class="s1">&#39;Box&#39;</span><span class="p">,</span> <span class="n">StringType</span><span class="p">(),</span> <span class="kc">True</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                <span class="n">StructField</span><span class="p">(</span><span class="s1">&#39;OriginalPriority&#39;</span><span class="p">,</span> <span class="n">StringType</span><span class="p">(),</span> <span class="kc">True</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                <span class="n">StructField</span><span class="p">(</span><span class="s1">&#39;Priority&#39;</span><span class="p">,</span> <span class="n">StringType</span><span class="p">(),</span> <span class="kc">True</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                <span class="n">StructField</span><span class="p">(</span><span class="s1">&#39;FinalPriority&#39;</span><span class="p">,</span> <span class="n">IntegerType</span><span class="p">(),</span> <span class="kc">True</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                <span class="n">StructField</span><span class="p">(</span><span class="s1">&#39;ALSUnit&#39;</span><span class="p">,</span> <span class="n">BooleanType</span><span class="p">(),</span> <span class="kc">True</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                <span class="n">StructField</span><span class="p">(</span><span class="s1">&#39;CallTypeGroup&#39;</span><span class="p">,</span> <span class="n">StringType</span><span class="p">(),</span> <span class="kc">True</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                <span class="n">StructField</span><span class="p">(</span><span class="s1">&#39;NumAlarms&#39;</span><span class="p">,</span> <span class="n">IntegerType</span><span class="p">(),</span> <span class="kc">True</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                <span class="n">StructField</span><span class="p">(</span><span class="s1">&#39;UnitType&#39;</span><span class="p">,</span> <span class="n">StringType</span><span class="p">(),</span> <span class="kc">True</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                <span class="n">StructField</span><span class="p">(</span><span class="s1">&#39;UnitSequenceInCallDispatch&#39;</span><span class="p">,</span> <span class="n">IntegerType</span><span class="p">(),</span> <span class="kc">True</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                <span class="n">StructField</span><span class="p">(</span><span class="s1">&#39;FirePreventionDistrict&#39;</span><span class="p">,</span> <span class="n">StringType</span><span class="p">(),</span> <span class="kc">True</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                <span class="n">StructField</span><span class="p">(</span><span class="s1">&#39;SupervisorDistrict&#39;</span><span class="p">,</span> <span class="n">StringType</span><span class="p">(),</span> <span class="kc">True</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                <span class="n">StructField</span><span class="p">(</span><span class="s1">&#39;Neighborhood&#39;</span><span class="p">,</span> <span class="n">StringType</span><span class="p">(),</span> <span class="kc">True</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                <span class="n">StructField</span><span class="p">(</span><span class="s1">&#39;Location&#39;</span><span class="p">,</span> <span class="n">StringType</span><span class="p">(),</span> <span class="kc">True</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                <span class="n">StructField</span><span class="p">(</span><span class="s1">&#39;RowID&#39;</span><span class="p">,</span> <span class="n">StringType</span><span class="p">(),</span> <span class="kc">True</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                <span class="n">StructField</span><span class="p">(</span><span class="s1">&#39;Delay&#39;</span><span class="p">,</span> <span class="n">FloatType</span><span class="p">(),</span> <span class="kc">True</span><span class="p">)])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Khởi tạo Spark Session</span>
+</span></span><span class="line"><span class="cl"><span class="n">spark</span> <span class="o">=</span> <span class="p">(</span><span class="n">SparkSession</span>
+</span></span><span class="line"><span class="cl">         <span class="o">.</span><span class="n">builder</span>
+</span></span><span class="line"><span class="cl">         <span class="o">.</span><span class="n">appName</span><span class="p">(</span><span class="s1">&#39;Common_DataFrame_Operations&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">         <span class="o">.</span><span class="n">getOrCreate</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Sử dụng DataFrameReader để đọc CSV file.</span>
+</span></span><span class="line"><span class="cl"><span class="n">sf_fire_file</span> <span class="o">=</span> <span class="s2">&#34;/databricks-datasets/learning-spark-v2/sf-fire/sf-fire-calls.csv&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">fire_df</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="n">sf_fire_file</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">schema</span><span class="o">=</span><span class="n">fire_schema</span><span class="p">)</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>Câu lệnh spark.read.csv() đọc CSV file và trả về DataFrame với các hàng và tên cột được định nghĩa từ schema đã làm.
+Bây giờ, chúng ta sẽ cùng ghi dữ liệu vào nguồn data với định dạng tùy bạn chọn với DataFrameWriter. Parquet là một định dạng kiểu columnar-format khá phổ biến, sử dụng linh hoạt để nén dữ liệu, schema sẽ được lưu như metadata trong file Parquet này, vì vậy khi sử dụng Spark sẽ không cần thủ công định nghĩa schema.
+<br>
+<br>
+<strong>Lưu DataFrame dưới dạng Parquet hoặc bảng SQL.</strong></p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># In Python và cũng tương tự với Scala</span>
+</span></span><span class="line"><span class="cl"><span class="n">parquetPath</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">fire_df</span><span class="o">.</span><span class="n">write</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&#34;parquet&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">parquetPath</span><span class="p">)</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>Hoặc bạn có thể lưu dưới dạng bảng, sẽ được đăng ký metadata với Hive metastore (Sẽ được tìm hiểu sâu hơn vào phần sau).</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># In Python</span>
+</span></span><span class="line"><span class="cl"><span class="n">parquet_table</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># Tên table</span>
+</span></span><span class="line"><span class="cl"><span class="n">fire_df</span><span class="o">.</span><span class="n">write</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&#34;parquet&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">saveAsTable</span><span class="p">(</span><span class="n">parquet_table</span><span class="p">)</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h3 id="transformations-và-actions">Transformations và Actions<a href="#transformations-và-actions" class="anchor" aria-hidden="true">#</a> </h3>
+<h5 id="1-truy-vấn-dữ-liệu">1. Truy vấn dữ liệu<a href="#1-truy-vấn-dữ-liệu" class="anchor" aria-hidden="true">#</a> </h5>
+<p>Trong Spark, sử dụng select() để truy vấn, đồng thời có thể sử dụng filter() hoặc where() để thực hiện các điều kiện truy vấn.
+Ví dụ:</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># In Python</span>
+</span></span><span class="line"><span class="cl"><span class="n">few_fire_df</span> <span class="o">=</span> <span class="p">(</span><span class="n">fire_df</span>
+</span></span><span class="line"><span class="cl">               <span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&#34;IncidentNumber&#34;</span><span class="p">,</span> <span class="s2">&#34;AvaiableDtTm&#34;</span><span class="p">,</span> <span class="s2">&#34;CallType&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">               <span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">&#34;CallType&#34;</span><span class="p">)</span> <span class="o">!=</span> <span class="s2">&#34;Medical Incident&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">few_fire_df</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">truncate</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">Output</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl"><span class="o">+--------------+----------------------+--------------+</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="n">IncidentNumber</span><span class="o">|</span><span class="n">AvailableDtTm</span>         <span class="o">|</span><span class="n">CallType</span>      <span class="o">|</span>
+</span></span><span class="line"><span class="cl"><span class="o">+--------------+----------------------+--------------+</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="mi">2003235</span>       <span class="o">|</span><span class="mi">01</span><span class="o">/</span><span class="mi">11</span><span class="o">/</span><span class="mi">2002</span> <span class="mi">01</span><span class="p">:</span><span class="mi">47</span><span class="p">:</span><span class="mi">00</span> <span class="n">AM</span><span class="o">|</span><span class="n">Structure</span> <span class="n">Fire</span><span class="o">|</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="mi">2003235</span>       <span class="o">|</span><span class="mi">01</span><span class="o">/</span><span class="mi">11</span><span class="o">/</span><span class="mi">2002</span> <span class="mi">01</span><span class="p">:</span><span class="mi">51</span><span class="p">:</span><span class="mi">54</span> <span class="n">AM</span><span class="o">|</span><span class="n">Structure</span> <span class="n">Fire</span><span class="o">|</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="mi">2003235</span>       <span class="o">|</span><span class="mi">01</span><span class="o">/</span><span class="mi">11</span><span class="o">/</span><span class="mi">2002</span> <span class="mi">01</span><span class="p">:</span><span class="mi">47</span><span class="p">:</span><span class="mi">00</span> <span class="n">AM</span><span class="o">|</span><span class="n">Structure</span> <span class="n">Fire</span><span class="o">|</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="mi">2003235</span>       <span class="o">|</span><span class="mi">01</span><span class="o">/</span><span class="mi">11</span><span class="o">/</span><span class="mi">2002</span> <span class="mi">01</span><span class="p">:</span><span class="mi">47</span><span class="p">:</span><span class="mi">00</span> <span class="n">AM</span><span class="o">|</span><span class="n">Structure</span> <span class="n">Fire</span><span class="o">|</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="mi">2003235</span>       <span class="o">|</span><span class="mi">01</span><span class="o">/</span><span class="mi">11</span><span class="o">/</span><span class="mi">2002</span> <span class="mi">01</span><span class="p">:</span><span class="mi">51</span><span class="p">:</span><span class="mi">17</span> <span class="n">AM</span><span class="o">|</span><span class="n">Structure</span> <span class="n">Fire</span><span class="o">|</span>
+</span></span><span class="line"><span class="cl"><span class="o">+--------------+----------------------+--------------+</span>
+</span></span><span class="line"><span class="cl"><span class="n">only</span> <span class="n">showing</span> <span class="n">top</span> <span class="mi">5</span> <span class="n">rows</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>Một số lệnh khác như <em>isNotNull()</em>, <em>countDistinct()</em>, <em>distinct()</em>.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># In Python, trả về số lượng các loại cuộc gọi (Call of types) khác nhau sử dụng countDistinct()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">pyspark.sql.functions</span> <span class="kn">import</span> <span class="o">*</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="n">fire_df</span>
+</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&#34;CallType&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="n">CallType</span><span class="p">)</span><span class="o">.</span><span class="n">isNotNull</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">countDistinct</span><span class="p">(</span><span class="s2">&#34;CallType&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s2">&#34;DistinctCallTypes&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="n">show</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">Output</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl"><span class="o">+-----------------+</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="n">DistinctCallTypes</span><span class="o">|</span>
+</span></span><span class="line"><span class="cl"><span class="o">+-----------------+</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span>               <span class="mi">32</span><span class="o">|</span>
+</span></span><span class="line"><span class="cl"><span class="o">+-----------------+</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>Chúng ta có thể hiện các loại cuộc gọi khác nhau sử dụng câu lệnh sau:</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># In Python</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="n">fire_df</span>
+</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&#34;CallType&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">&#34;CallType&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">isNotNull</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="n">distinct</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="kc">False</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">Output</span><span class="p">:</span> <span class="mi">32</span>
+</span></span><span class="line"><span class="cl"><span class="o">+-----------------------------------+</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="n">CallType</span>                           <span class="o">|</span>
+</span></span><span class="line"><span class="cl"><span class="o">+-----------------------------------+</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="n">Elevator</span> <span class="o">/</span> <span class="n">Escalator</span> <span class="n">Rescue</span>        <span class="o">|</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="n">Marine</span> <span class="n">Fire</span>                        <span class="o">|</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="n">Aircraft</span> <span class="n">Emergency</span>                 <span class="o">|</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="n">Confined</span> <span class="n">Space</span> <span class="o">/</span> <span class="n">Structure</span> <span class="n">Collapse</span><span class="o">|</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="n">Administrative</span>                     <span class="o">|</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="n">Alarms</span>                             <span class="o">|</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="n">Odor</span> <span class="p">(</span><span class="n">Strange</span> <span class="o">/</span> <span class="n">Unknown</span><span class="p">)</span>           <span class="o">|</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="n">Lightning</span> <span class="n">Strike</span> <span class="p">(</span><span class="n">Investigation</span><span class="p">)</span>   <span class="o">|</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="n">Citizen</span> <span class="n">Assist</span> <span class="o">/</span> <span class="n">Service</span> <span class="n">Call</span>      <span class="o">|</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="n">HazMat</span>                             <span class="o">|</span>
+</span></span><span class="line"><span class="cl"><span class="o">+-----------------------------------+</span>
+</span></span><span class="line"><span class="cl"><span class="n">only</span> <span class="n">showing</span> <span class="n">top</span> <span class="mi">10</span> <span class="n">rows</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h5 id="2-đổi-tên-thêm-và-xóa-cột">2. Đổi tên, thêm và xóa cột<a href="#2-đổi-tên-thêm-và-xóa-cột" class="anchor" aria-hidden="true">#</a> </h5>
+<p>Để đổi tên cột, ta có thể sử dụng <em>withColumnRenamed()</em>.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># In Python</span>
+</span></span><span class="line"><span class="cl"><span class="n">new_fire_df</span> <span class="o">=</span> <span class="n">fire_df</span><span class="o">.</span><span class="n">withColumnRenamed</span><span class="p">(</span><span class="s2">&#34;Delay&#34;</span><span class="p">,</span> <span class="s2">&#34;ResponseDelayedInMins&#34;</span><span class="p">)</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>Trong nhiều trường hợp, dữ liệu raw và không thể sử dụng được khi phân tích như dữ liệu ngày tháng là String thay vì Timestamp.
+Vì vậy, chúng ta có thể thay đổi bằng cách thêm cột mới với dữ liệu mong muốn và xóa đi cột. Thật may vì trong Spark cũng hỗ trợ việc này với <em>withColumn()</em> để có thể thêm cột, <em>drop()</em> để xóa cột và <em>to_timestamp()</em> hay <em>to_date()</em> để chuyển từ kiểu dữ liệu string sang date hay timestamp như sau:</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># In Python</span>
+</span></span><span class="line"><span class="cl"><span class="n">fire_ts_df</span> <span class="o">=</span> <span class="p">(</span><span class="n">new_fire_df</span>
+</span></span><span class="line"><span class="cl">              <span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">&#34;IncidentDate&#34;</span><span class="p">,</span> <span class="n">to_timestamp</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">&#34;CallDate&#34;</span><span class="p">),</span> <span class="s2">&#34;MM/dd/yyyy&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">              <span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&#34;CallDate&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">              <span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">&#34;OnWatchDate&#34;</span><span class="p">),</span> <span class="n">to_timestamp</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">&#34;WatchDate&#34;</span><span class="p">),</span> <span class="s2">&#34;MM/dd/yyyy&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">              <span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&#34;WatchDate&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">              <span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">&#34;AvailableDtTS&#34;</span><span class="p">),</span> <span class="n">to_timestamp</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">&#34;AvailableDtTm&#34;</span><span class="p">),</span> <span class="s2">&#34;MM/dd/yyyy hh:mm:ss a&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">              <span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&#34;AvailableDtTm&#34;</span><span class="p">))</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>Spark cũng hỗ trợ nhiều phương thức xử lý dữ liệu từ <em>spark.sql.functions</em> như <em>month()</em>, <em>year()</em> và <em>day()</em>.</p>
+<h5 id="3-tổng-hợp-dữ-liệu">3. Tổng hợp dữ liệu<a href="#3-tổng-hợp-dữ-liệu" class="anchor" aria-hidden="true">#</a> </h5>
+<p>Một số phương thức thực hiện tổng hợp dữ liệu như: <em>groupBy()</em>, <em>orderBy()</em>, <em>count()</em>.
+<br>
+<br>
+Cùng thực hiện với một câu hỏi: Đâu là loại cuộc gọi cứu hóa nhiều nhất?</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># In Python</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="n">fire_ts_df</span>
+</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&#34;CallType&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">&#34;CallType&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">isNotNull</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="n">groupBy</span><span class="p">(</span><span class="s2">&#34;CallType&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="n">count</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="n">orderBy</span><span class="p">(</span><span class="s2">&#34;count&#34;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">truncate</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">Output</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl"><span class="o">+-------------------------------+-------+</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="n">CallType</span>                       <span class="o">|</span><span class="n">count</span>  <span class="o">|</span>
+</span></span><span class="line"><span class="cl"><span class="o">+-------------------------------+-------+</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="n">Medical</span> <span class="n">Incident</span>               <span class="o">|</span><span class="mi">2843475</span><span class="o">|</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="n">Structure</span> <span class="n">Fire</span>                 <span class="o">|</span><span class="mi">578998</span> <span class="o">|</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="n">Alarms</span>                         <span class="o">|</span><span class="mi">483518</span> <span class="o">|</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="n">Traffic</span> <span class="n">Collision</span>              <span class="o">|</span><span class="mi">175507</span> <span class="o">|</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="n">Citizen</span> <span class="n">Assist</span> <span class="o">/</span> <span class="n">Service</span> <span class="n">Call</span>  <span class="o">|</span><span class="mi">65360</span>  <span class="o">|</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="n">Other</span>                          <span class="o">|</span><span class="mi">56961</span>  <span class="o">|</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="n">Outside</span> <span class="n">Fire</span>                   <span class="o">|</span><span class="mi">51603</span>  <span class="o">|</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="n">Vehicle</span> <span class="n">Fire</span>                   <span class="o">|</span><span class="mi">20939</span>  <span class="o">|</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="n">Water</span> <span class="n">Rescue</span>                   <span class="o">|</span><span class="mi">20037</span>  <span class="o">|</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="n">Gas</span> <span class="n">Leak</span> <span class="p">(</span><span class="n">Natural</span> <span class="ow">and</span> <span class="n">LP</span> <span class="n">Gases</span><span class="p">)</span><span class="o">|</span><span class="mi">17284</span>  <span class="o">|</span>
+</span></span><span class="line"><span class="cl"><span class="o">+-------------------------------+-------+</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>Vậy câu trả lời là: <strong>Medical Incident</strong>.</p>
+<h5 id="4-một-số-thao-tác-với-dataframe-khác">4. Một số thao tác với DataFrame khác<a href="#4-một-số-thao-tác-với-dataframe-khác" class="anchor" aria-hidden="true">#</a> </h5>
+<p>DataFrame API cũng cung cấp một số phương thức thống kê như: <em>min()</em>, <em>max()</em>, <em>sum()</em> và <em>avg()</em>.
+<br>
+<br>
+Một cách import Pythonic để không gây xung đột giữa các built-in Python function như sau:</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># In Python</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pyspark.sql.functions</span> <span class="k">as</span> <span class="nn">F</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="n">fire_ts_df</span>
+</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">F</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s2">&#34;NumAlarms&#34;</span><span class="p">),</span> <span class="n">F</span><span class="o">.</span><span class="n">avg</span><span class="p">(</span><span class="s2">&#34;ResponseDelayedInMins&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">         <span class="n">F</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="s2">&#34;ResponseDelayedInMins&#34;</span><span class="p">),</span> <span class="n">F</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="s2">&#34;ResponseDelayedInMins&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="n">show</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">Output</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl"><span class="o">+--------------+--------------------------+--------------------------+---------+</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="nb">sum</span><span class="p">(</span><span class="n">NumAlarms</span><span class="p">)</span><span class="o">|</span><span class="n">avg</span><span class="p">(</span><span class="n">ResponseDelayedInMins</span><span class="p">)</span><span class="o">|</span><span class="nb">min</span><span class="p">(</span><span class="n">ResponseDelayedInMins</span><span class="p">)</span><span class="o">|</span><span class="nb">max</span><span class="p">(</span><span class="o">...</span><span class="p">)</span> <span class="o">|</span>
+</span></span><span class="line"><span class="cl"><span class="o">+--------------+--------------------------+--------------------------+---------+</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span>       <span class="mi">4403441</span><span class="o">|</span>         <span class="mf">3.902170335891614</span><span class="o">|</span>               <span class="mf">0.016666668</span><span class="o">|</span><span class="mf">1879.6167</span><span class="o">|</span>
+</span></span><span class="line"><span class="cl"><span class="o">+--------------+--------------------------+--------------------------+---------+</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>Các phương thức thống kê nâng cao thường gặp cho công việc khoa học dữ liệu như: stat(), describe(), correlation(),
+covariance(), sampleBy(), approxQuantile(), frequentItems(), &hellip;</p>
+
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				</div>
+			<div class="page-nav d-flex flex-column flex-sm-row">
+	
+	<div class="card w-100">
+			<div class="card-body d-flex">
+				<div class="d-flex flex-column justify-content-center">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-left" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+						<path d="M5 12l14 0"></path>
+						<path d="M5 12l6 6"></path>
+						<path d="M5 12l6 -6"></path>
+				 	</svg>
+				</div>
+				<div class="d-flex flex-column">
+					<div class="text-body-secondary">Prev</div>
+					<a href="/de-docs/spark/dataframe-api/" class="stretched-link text-reset text-decoration-none">5. DataFrame API</a>
+				</div>
+			</div>
+		</div>
+	<div class="m-2"></div>
+	<div class="card text-end w-100">
+			<div class="card-body d-flex justify-content-end">
+				<div class="d-flex flex-column">
+					<div class="text-body-secondary">Next</div>
+					<a href="/de-docs/overview/loi-mo-dau/" class="stretched-link text-reset text-decoration-none">Lời mở đầu</a>
+				</div>
+				<div class="d-flex flex-column justify-content-center">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+						<path d="M5 12l14 0"></path>
+						<path d="M13 18l6 -6"></path>
+						<path d="M13 6l6 6"></path>
+					</svg>
+				</div>
+			</div>
+		</div>
+	</div>
+
+			
+		</main>
+		
+	</div>
+
+      
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-lg">
+    <div class="row">
+      <div class="col-lg-8 text-center text-lg-start">
+        <ul class="list-inline">
+          <li class="list-inline-item"><a class="text-muted" href="/privacy/">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 text-center text-lg-end">
+        <ul class="list-inline">
+          <li class="list-inline-item">Được tạo bởi Dũng Lương</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    
+
+<script async
+  src="/js/app.70b4fc255213028d0754da1f19e3048ceb95f97b9f3dba08cec9b12e1f89c3a0.js"
+  integrity="sha256-cLT8JVITAo0HVNofGeMEjOuV&#43;XufPboIzsmxLh&#43;Jw6A=">
+</script>
+
+
+
+
+
+<script async
+  src="/js/flexsearch.f5ccd5c9fcb1730536551bbcb7385a5c46d2ad164806184dd54a219982ee2c84.js"
+  integrity="sha256-9czVyfyxcwU2VRu8tzhaXEbSrRZIBhhN1UohmYLuLIQ=">
+</script>
+<script async
+  src="/js/search-modal.19d8681c7ab3f0ef428bde58a53831c073a4a4d405dafa3ed47b9063c8929768.js"
+  integrity="sha256-GdhoHHqz8O9Ci95YpTgxwHOkpNQF2vo&#43;1HuQY8iSl2g=">
+</script>
+
+    
+  </body>
+</html>

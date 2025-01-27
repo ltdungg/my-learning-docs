@@ -7,7 +7,7 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Copyright (c) 2020-2024 Thulite</copyright>
-    <lastBuildDate>Wed, 22 Jan 2025 23:56:13 +0700</lastBuildDate>
+    <lastBuildDate>Sun, 26 Jan 2025 23:09:23 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/de-docs/spark/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>1. Giới thiệu về Spark</title>
@@ -43,6 +43,13 @@
       <pubDate>Thu, 07 Sep 2023 16:04:48 +0200</pubDate>
       <guid>http://localhost:1313/de-docs/spark/dataframe-api/</guid>
       <description>&lt;style&gt;body {text-align: justify}&lt;/style&gt;&#xD;&#xA;&lt;p&gt;Spark DataFrame được lấy cảm hứng từ pandas DataFrame về cấu trúc, định dạng và một số thao tác cụ thể. Ví dụ về một Spark DataFrame được hiển thị tại Hình 1.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>6. Một số thao tác với DataFrame</title>
+      <link>http://localhost:1313/de-docs/spark/common-dataframe-operation/</link>
+      <pubDate>Thu, 07 Sep 2023 16:04:48 +0200</pubDate>
+      <guid>http://localhost:1313/de-docs/spark/common-dataframe-operation/</guid>
+      <description>&lt;style&gt;body {text-align: justify}&lt;/style&gt;&#xD;&#xA;&lt;h3 id=&#34;dataframereader-và-dataframe-writer&#34;&gt;DataFrameReader và DataFrame Writer&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;DataFrameReader&lt;/strong&gt; cho phép bạn đọc data từ nhiều nguồn khác nhau vào DataFrame, ví dụ JSON, CSV, Parquet, Text, Arvo, ORC, &amp;hellip;&#xA;&lt;br&gt;&#xA;&lt;strong&gt;DataFrameWriter&lt;/strong&gt; cho phép bạn ghi DataFrame vào nguồn data dưới một định dạng cụ thể.&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;Cùng bắt đầu với một ví dụ, chúng ta sẽ đọc một file CSV lớn chứa dữ liệu từ San Franciso Fire Department calls. Bao gồm 28 cột và 4,380,660 records.&#xA;Dữ liệu bạn có thể tải &lt;a href=&#34;https://github.com/databricks/LearningSparkV2/tree/master&#34;&gt;tại đây&lt;/a&gt;. Với một lượng dữ liệu lớn thì việc tự định nghĩa schema mang lại hiệu quả tốt hơn so với Spark tự xác định schema.&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;Cùng xem cách để làm ví dụ này:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
