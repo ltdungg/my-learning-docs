@@ -31,20 +31,27 @@
     
     <url>
       <loc>http://localhost:1313/docs/ly-thuyet/5.-aws-virtual-private-cloud/</loc>
-      <lastmod>2023-09-07T16:13:18+02:00</lastmod>
+      <lastmod>2025-02-19T22:39:08+07:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
     
     <url>
-      <loc>http://localhost:1313/docs/ly-thuyet/6.-vpc-peering-transit-gateway/</loc>
-      <lastmod>2023-09-07T16:13:18+02:00</lastmod>
+      <loc>http://localhost:1313/docs/ly-thuyet/6.-vpc-security-and-multi-vpc-features/</loc>
+      <lastmod>2025-02-19T22:39:08+07:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
     
     <url>
       <loc>http://localhost:1313/docs/ly-thuyet/7.-vpn-direct-connect-loadbalancer-extraresources/</loc>
+      <lastmod>2025-02-19T22:39:08+07:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/docs/ly-thuyet/8.-amazon-elastic-compute-cloud-ec2/</loc>
       <lastmod>2023-09-07T16:13:18+02:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>

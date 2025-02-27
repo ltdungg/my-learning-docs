@@ -58,7 +58,7 @@
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/de-docs/spark/bai-tap-lan-mot/</loc>
-    <lastmod>2023-09-07T16:04:48+02:00</lastmod>
+    <lastmod>2025-02-19T22:39:08+07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -99,6 +99,21 @@
   </url><url>
     <loc>http://localhost:1313/docs/ly-thuyet/4.-t%E1%BB%91i-%C6%B0u-h%C3%B3a-chi-ph%C3%AD-tr%C3%AAn-aws-v%C3%A0-l%C3%A0m-vi%E1%BB%87c-v%E1%BB%9Bi-aws-support/</loc>
     <lastmod>2025-01-22T11:11:41+07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/docs/ly-thuyet/5.-aws-virtual-private-cloud/</loc>
+    <lastmod>2025-02-19T22:39:08+07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/docs/ly-thuyet/6.-vpc-security-and-multi-vpc-features/</loc>
+    <lastmod>2025-02-19T22:39:08+07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/docs/ly-thuyet/7.-vpn-direct-connect-loadbalancer-extraresources/</loc>
+    <lastmod>2025-02-19T22:39:08+07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>

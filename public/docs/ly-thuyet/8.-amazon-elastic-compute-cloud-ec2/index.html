@@ -14,12 +14,12 @@
 
 <link rel="stylesheet" href="/main.063a2364eb8f0a48e6f24eac46a8b495d91b9bc47ab7c2040387ce5630f740fb383028ef88bc4a1ecfc51ce60bdb8431823c0df1b93f70c88496a58a967e957e.css" integrity="sha512-BjojZOuPCkjm8k6sRqi0ldkbm8R6t8IEA4fOVjD3QPs4MCjviLxKHs/FHOYL24QxgjwN8bk/cMiElqWKln6Vfg==" crossorigin="anonymous">
 
-<noscript><style>img.lazyload { display: none; }</style></noscript><base href="http://localhost:1313/docs/ly-thuyet/4.-t%E1%BB%91i-%C6%B0u-h%C3%B3a-chi-ph%C3%AD-tr%C3%AAn-aws-v%C3%A0-l%C3%A0m-vi%E1%BB%87c-v%E1%BB%9Bi-aws-support/">
+<noscript><style>img.lazyload { display: none; }</style></noscript><base href="http://localhost:1313/docs/ly-thuyet/8.-amazon-elastic-compute-cloud-ec2/">
 
-  <link rel="canonical" href="http://localhost:1313/docs/ly-thuyet/4.-t%E1%BB%91i-%C6%B0u-h%C3%B3a-chi-ph%C3%AD-tr%C3%AAn-aws-v%C3%A0-l%C3%A0m-vi%E1%BB%87c-v%E1%BB%9Bi-aws-support/">
+  <link rel="canonical" href="http://localhost:1313/docs/ly-thuyet/8.-amazon-elastic-compute-cloud-ec2/">
 
 
-<title>4. Tối ưu hóa chi phí trên AWS và Làm việc với AWS Support  |  Dũng&#39;s Blog</title>
+<title>8. Amazon Elastic Compute Cloud (EC2)  |  Dũng&#39;s Blog</title>
 <meta name="description" content="Congrats on setting up a new Doks project!">
 
     
@@ -47,21 +47,23 @@
       >
 <link rel="manifest" href="/manifest.webmanifest">
 
-<meta property="og:url" content="http://localhost:1313/docs/ly-thuyet/4.-t%E1%BB%91i-%C6%B0u-h%C3%B3a-chi-ph%C3%AD-tr%C3%AAn-aws-v%C3%A0-l%C3%A0m-vi%E1%BB%87c-v%E1%BB%9Bi-aws-support/">
+<meta property="og:url" content="http://localhost:1313/docs/ly-thuyet/8.-amazon-elastic-compute-cloud-ec2/">
   <meta property="og:site_name" content="Dũng&#39;s Blog">
-  <meta property="og:title" content="4. Tối ưu hóa chi phí trên AWS và Làm việc với AWS Support">
-  <meta property="og:description" content="Tối ưu hóa chi phí trên AWS Lựa chọn cấu hình tài nguyên tính toán và nơi lưu trữ dữ liệu phù hợp. Tận dụng các phương thức thanh toán giảm giá như reserved instance , saving plan, spot. Xoá các tài nguyên không sử dụng, bật tắt tự động các tài nguyên không cần chạy 24/7. Tận dụng các dịch vụ serverless. Thiết kế kiến trúc tối ưu Cài đặt và sử dụng AWS Budget. Quản lý chi phí theo phòng ban / ứng dụng với cost allocation tag. Liên tục theo dõi và tối ưu hóa chi phí. Công cụ tính toán chi phí https://calculator.aws/#/">
+  <meta property="og:title" content="8. Amazon Elastic Compute Cloud (EC2)">
+  <meta property="og:description" content="Amazon EC2 giống với máy chủ áo hoặc máy chủ vật lý truyền thống.
+Có khả năng:">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="docs">
     <meta property="article:published_time" content="2023-09-07T16:13:18+02:00">
-    <meta property="article:modified_time" content="2025-01-22T11:11:41+07:00">
+    <meta property="article:modified_time" content="2023-09-07T16:13:18+02:00">
     <meta property="og:image" content="http://localhost:1313/cover.png">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="http://localhost:1313/cover.png">
-  <meta name="twitter:title" content="4. Tối ưu hóa chi phí trên AWS và Làm việc với AWS Support">
-  <meta name="twitter:description" content="Tối ưu hóa chi phí trên AWS Lựa chọn cấu hình tài nguyên tính toán và nơi lưu trữ dữ liệu phù hợp. Tận dụng các phương thức thanh toán giảm giá như reserved instance , saving plan, spot. Xoá các tài nguyên không sử dụng, bật tắt tự động các tài nguyên không cần chạy 24/7. Tận dụng các dịch vụ serverless. Thiết kế kiến trúc tối ưu Cài đặt và sử dụng AWS Budget. Quản lý chi phí theo phòng ban / ứng dụng với cost allocation tag. Liên tục theo dõi và tối ưu hóa chi phí. Công cụ tính toán chi phí https://calculator.aws/#/">
+  <meta name="twitter:title" content="8. Amazon Elastic Compute Cloud (EC2)">
+  <meta name="twitter:description" content="Amazon EC2 giống với máy chủ áo hoặc máy chủ vật lý truyền thống.
+Có khả năng:">
       <meta name="twitter:site" content="@getdoks">
 
     
@@ -91,7 +93,7 @@
      },
      {
        "@type": "ListItem",
-       "name": "4. Tối Ưu Hóa Chi Phí Trên Aws Và Làm Việc Với Aws Support",
+       "name": "8. Amazon Elastic Compute Cloud ( Ec2)",
        "position": 4
      }
    ]
@@ -181,8 +183,8 @@
       <a href="/docs/ly-thuyet/3.-c%C3%B4ng-c%E1%BB%A5-qu%E1%BA%A3n-l%C3%BD-aws-services/">3. Công cụ quản lý AWS Services</a>
   </li>
 
-  <li class="active" >
-      <a aria-current="page" href="/docs/ly-thuyet/4.-t%E1%BB%91i-%C6%B0u-h%C3%B3a-chi-ph%C3%AD-tr%C3%AAn-aws-v%C3%A0-l%C3%A0m-vi%E1%BB%87c-v%E1%BB%9Bi-aws-support/">4. Tối ưu hóa chi phí trên AWS và Làm việc với AWS Support</a>
+  <li>
+      <a href="/docs/ly-thuyet/4.-t%E1%BB%91i-%C6%B0u-h%C3%B3a-chi-ph%C3%AD-tr%C3%AAn-aws-v%C3%A0-l%C3%A0m-vi%E1%BB%87c-v%E1%BB%9Bi-aws-support/">4. Tối ưu hóa chi phí trên AWS và Làm việc với AWS Support</a>
   </li>
 
   <li>
@@ -197,8 +199,8 @@
       <a href="/docs/ly-thuyet/7.-vpn-direct-connect-loadbalancer-extraresources/">7. VPN - Direct Connect - LoadBalancer - ExtraResources</a>
   </li>
 
-  <li>
-      <a href="/docs/ly-thuyet/8.-amazon-elastic-compute-cloud-ec2/">8. Amazon Elastic Compute Cloud (EC2)</a>
+  <li class="active" >
+      <a aria-current="page" href="/docs/ly-thuyet/8.-amazon-elastic-compute-cloud-ec2/">8. Amazon Elastic Compute Cloud (EC2)</a>
   </li>
       </ul>
     </details>
@@ -385,8 +387,8 @@
       <a href="/docs/ly-thuyet/3.-c%C3%B4ng-c%E1%BB%A5-qu%E1%BA%A3n-l%C3%BD-aws-services/">3. Công cụ quản lý AWS Services</a>
   </li>
 
-  <li class="active" >
-      <a aria-current="page" href="/docs/ly-thuyet/4.-t%E1%BB%91i-%C6%B0u-h%C3%B3a-chi-ph%C3%AD-tr%C3%AAn-aws-v%C3%A0-l%C3%A0m-vi%E1%BB%87c-v%E1%BB%9Bi-aws-support/">4. Tối ưu hóa chi phí trên AWS và Làm việc với AWS Support</a>
+  <li>
+      <a href="/docs/ly-thuyet/4.-t%E1%BB%91i-%C6%B0u-h%C3%B3a-chi-ph%C3%AD-tr%C3%AAn-aws-v%C3%A0-l%C3%A0m-vi%E1%BB%87c-v%E1%BB%9Bi-aws-support/">4. Tối ưu hóa chi phí trên AWS và Làm việc với AWS Support</a>
   </li>
 
   <li>
@@ -401,8 +403,8 @@
       <a href="/docs/ly-thuyet/7.-vpn-direct-connect-loadbalancer-extraresources/">7. VPN - Direct Connect - LoadBalancer - ExtraResources</a>
   </li>
 
-  <li>
-      <a href="/docs/ly-thuyet/8.-amazon-elastic-compute-cloud-ec2/">8. Amazon Elastic Compute Cloud (EC2)</a>
+  <li class="active" >
+      <a aria-current="page" href="/docs/ly-thuyet/8.-amazon-elastic-compute-cloud-ec2/">8. Amazon Elastic Compute Cloud (EC2)</a>
   </li>
       </ul>
     </details>
@@ -433,10 +435,9 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#tối-ưu-hóa-chi-phí-trên-aws">Tối ưu hóa chi phí trên AWS</a></li>
-        <li><a href="#thiết-kế-kiến-trúc-tối-ưu">Thiết kế kiến trúc tối ưu</a></li>
-        <li><a href="#công-cụ-tính-toán-chi-phí">Công cụ tính toán chi phí</a></li>
-        <li><a href="#làm-việc-với-aws-support">Làm việc với AWS Support</a></li>
+        <li><a href="#ami--backup--key-pair">AMI / Backup / Key Pair</a></li>
+        <li><a href="#elastic-block-store">Elastic Block Store</a></li>
+        <li><a href="#instance-store">Instance Store</a></li>
       </ul>
     </li>
   </ul>
@@ -446,7 +447,7 @@
 		</nav>
 		<main class="docs-content col-lg-11 col-xl-9">
 		
-			<h1>4. Tối ưu hóa chi phí trên AWS và Làm việc với AWS Support</h1>
+			<h1>8. Amazon Elastic Compute Cloud (EC2)</h1>
 			
 			<nav class="toc-mobile d-xl-none" aria-label="Quaternary navigation">
 				<details>
@@ -456,10 +457,9 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#tối-ưu-hóa-chi-phí-trên-aws">Tối ưu hóa chi phí trên AWS</a></li>
-        <li><a href="#thiết-kế-kiến-trúc-tối-ưu">Thiết kế kiến trúc tối ưu</a></li>
-        <li><a href="#công-cụ-tính-toán-chi-phí">Công cụ tính toán chi phí</a></li>
-        <li><a href="#làm-việc-với-aws-support">Làm việc với AWS Support</a></li>
+        <li><a href="#ami--backup--key-pair">AMI / Backup / Key Pair</a></li>
+        <li><a href="#elastic-block-store">Elastic Block Store</a></li>
+        <li><a href="#instance-store">Instance Store</a></li>
       </ul>
     </li>
   </ul>
@@ -469,39 +469,69 @@
 
 			</nav>
 			<style>body {text-align: justify}</style>
-<h3 id="tối-ưu-hóa-chi-phí-trên-aws">Tối ưu hóa chi phí trên AWS<a href="#tối-ưu-hóa-chi-phí-trên-aws" class="anchor" aria-hidden="true">#</a> </h3>
+<p><span style="color: orange; font-weight:bold;">Amazon EC2</span> giống với máy chủ áo hoặc máy chủ vật lý truyền thống.</p>
+<p>Có khả năng:</p>
 <ul>
-<li>Lựa chọn cấu hình tài nguyên tính toán và nơi lưu trữ dữ liệu phù hợp.</li>
-<li>Tận dụng các phương thức thanh toán giảm giá như <span style="color: orange; font-weight:bold;">reserved instance</span>
-, <span style="color: orange; font-weight:bold;">saving plan</span>, <span style="color: orange; font-weight:bold;">spot</span>.</li>
-<li>Xoá các tài nguyên không sử dụng, bật tắt tự động các tài nguyên không cần chạy 24/7.</li>
-<li>Tận dụng các dịch vụ <span style="color: orange; font-weight:bold;">serverless</span>.</li>
+<li>khởi tạo nhanh</li>
+<li>khả năng co dãn tài nguyên mạnh mẽ</li>
+<li>linh hoạt</li>
 </ul>
-<h3 id="thiết-kế-kiến-trúc-tối-ưu">Thiết kế kiến trúc tối ưu<a href="#thiết-kế-kiến-trúc-tối-ưu" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Amazon EC2 có thể hỗ trợ workload như lưu trữ web, ứng dụng, cơ sở dử liệu và bất cứ công việc nào khác mà máy chủ thông thường có thể đáp ứng.</p>
+<p>Cấu hình của Amazon EC2 không được tùy chọn tùy ý, mà lựa chọn thông qua các EC2 Instance Type sẽ quyết định:</p>
 <ul>
-<li>Cài đặt và sử dụng <span style="color: orange; font-weight:bold;">AWS Budget</span>.</li>
-<li>Quản lý chi phí theo phòng ban / ứng dụng với <span style="color: orange; font-weight:bold;">cost allocation tag</span>.</li>
-<li><span style="color: orange; font-weight:bold;">Liên tục</span> theo dõi và tối ưu hóa chi phí.</li>
+<li>CPU (Intel / AMD / ARM (Graviton 1/2/3) / GPU )</li>
+<li>Memory</li>
+<li>Network</li>
+<li>Storage</li>
 </ul>
-<h3 id="công-cụ-tính-toán-chi-phí">Công cụ tính toán chi phí<a href="#công-cụ-tính-toán-chi-phí" class="anchor" aria-hidden="true">#</a> </h3>
-<p><a href="https://calculator.aws/#/">https://calculator.aws/#/</a></p>
+<p>
+
+<img
+  src="/docs/ly-thuyet/images/ec2-architecture_hu_7c57a0633e659e04.webp"
+  width="1639"
+  height="644"
+  decoding="async"
+  fetchpriority="auto"
+  loading="lazy"
+  alt="image"id="h-rh-i-0"
+/></p>
+<h3 id="ami--backup--key-pair">AMI / Backup / Key Pair<a href="#ami--backup--key-pair" class="anchor" aria-hidden="true">#</a> </h3>
 <ul>
-<li>Cho phép tạo các estimate các dịch vụ thông dụng.</li>
-<li>Có thể chia sẻ ca estimate cho nguười khác.</li>
-<li>Chi phí sẽ khác biệt theo từng Region</li>
+<li>Sử dụng <span style="color: orange; font-weight:bold;">AMI (Amazon Machine Image)</span> có thể provision ra một hoặc nhiều EC2 Instances cùng lúc.
+AMI có sẵn của AWS, trên AWS Market Place và custom AMI tự tạo từ EC2</li>
+<li>AMI bao gồm root OS volumes, quyền sử dụng AMI quy định tài khoản AWS được sử dụng và mapping EBS volume sẽ được tạo và gán vào EC2 Instances</li>
+<li>EC2 Instance có thể được <span style="color: orange; font-weight:bold;">backup</span> bằng cách tạo <span style="color: orange; font-weight:bold;">snapshot</span>.</li>
+<li><span style="color: orange; font-weight:bold;">Key pair</span> (public key và private key) dùng để mã hóa thông tin đăng nhập cho EC2 Instance.</li>
 </ul>
-<h3 id="làm-việc-với-aws-support">Làm việc với AWS Support<a href="#làm-việc-với-aws-support" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="elastic-block-store">Elastic Block Store<a href="#elastic-block-store" class="anchor" aria-hidden="true">#</a> </h3>
 <ul>
-<li>AWS có 4 gói hỗ trợ chính:
+<li><span style="color: orange; font-weight:bold;">Amazon EBS</span> cung cấp block storage và được gán trực tiếp vào EC2 Instance, tuy được gán trực tiếp như một RAW device, EBS về bản chất hoạt động độc lập với EC2 và được kết nối thông qua mạng riêng của EBS.</li>
+<li>EBS ó 2 nhóm đĩa chính là HDD và SSD, được thiết kế để đạt độ sẵn sàng 99.999% bằng cách replicate dữ liệu giữa 3 Storage Node trong 1 AZ</li>
+<li>Có một số EC2 Instances đặc thù được tối ưu hóa hiệu năng EBS (Optimized EBS Instances)</li>
+<li>EBS volumes, mặc định chỉ được gán vào 1 EC2 Instance, EC2 Instances chạy trên <strong>Hypervisor Nitro</strong> có thể dùng 1 EBS volume gắn vào nhiều EC2 Instances. (EBS Multi attach)</li>
+<li>EBS được backup bằng cách thực hiện snapshot vào S3 (Simple Storage Service)
 <ul>
-<li>Basic (Explore)</li>
-<li>Developer (Dev/Test)</li>
-<li>Business (Production)</li>
-<li>Enterprise (Large Enterprise)</li>
+<li>Snapshot đầu tiên là full, tất cả các snapshot tiếp theo là incremental.</li>
 </ul>
 </li>
-<li>Có thể nâng cấp gói hỗ trợ  trong thời gian ngắn để đẩy nhanh tốc độ hỗ trợ khi có sự
-cố quan trọng cần xử lý nhanh.</li>
+</ul>
+<h3 id="instance-store">Instance Store<a href="#instance-store" class="anchor" aria-hidden="true">#</a> </h3>
+<ul>
+<li><span style="color: orange; font-weight:bold;">Instance store</span> là vùng đĩa <span style="color: orange; font-weight:bold;">NVME</span> tốc độ cực cao, nằm trên physical node chạy các máy ảo EC2.
+<ul>
+<li>Instance store sẽ bị xóa hết dữ liệu khi chúng ta thực hiện stop EC2 Instance</li>
+<li>Instance store sẽ không bị xóa dữ liệu khi thực hiện restart máy hoặc bị crash.</li>
+<li>Instance store không replicate dữ liệu dự phòng nên thường không khuyến khích lưu trữ dữ liệu quan trọng.
+<ul>
+<li>Sử dụng dữ liệu trong các trường hợp cần hiệu năng cực cao lên tới hàng triệu IOPS.
+<ul>
+<li>Khi sử dụng thường được replicate dữ liệu vào một EBS volume để đảm bảo an toàn.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
@@ -520,7 +550,7 @@ cố quan trọng cần xử lý nhanh.</li>
 				</div>
 				<div class="d-flex flex-column">
 					<div class="text-body-secondary">Prev</div>
-					<a href="/docs/ly-thuyet/3.-c%C3%B4ng-c%E1%BB%A5-qu%E1%BA%A3n-l%C3%BD-aws-services/" class="stretched-link text-reset text-decoration-none">3. Công cụ quản lý AWS Services</a>
+					<a href="/docs/ly-thuyet/7.-vpn-direct-connect-loadbalancer-extraresources/" class="stretched-link text-reset text-decoration-none">7. VPN - Direct Connect - LoadBalancer - ExtraResources</a>
 				</div>
 			</div>
 		</div>
@@ -529,7 +559,7 @@ cố quan trọng cần xử lý nhanh.</li>
 			<div class="card-body d-flex justify-content-end">
 				<div class="d-flex flex-column">
 					<div class="text-body-secondary">Next</div>
-					<a href="/docs/ly-thuyet/5.-aws-virtual-private-cloud/" class="stretched-link text-reset text-decoration-none">5. AWS Virtual Private Cloud</a>
+					<a href="/docs/thuc-hanh/th%E1%BB%B1c-h%C3%A0nh-l%E1%BA%A7n-1/" class="stretched-link text-reset text-decoration-none">Thực hành lần 1</a>
 				</div>
 				<div class="d-flex flex-column justify-content-center">
 					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
