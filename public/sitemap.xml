@@ -2,6 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/de-docs/de-basic/datawarehouse/data-warehouse-basic/</loc>
+    <lastmod>2023-09-07T16:06:50+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/de-docs/overview/</loc>
+    <lastmod>2025-01-22T11:11:41+07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/de-docs/de-basic/</loc>
+    <lastmod>2023-09-07T16:06:50+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/de-docs/de-basic/datawarehouse/dtamsp/</loc>
+    <lastmod>2023-09-07T16:06:50+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/de-docs/spark/</loc>
+    <lastmod>2025-01-22T11:11:41+07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>http://localhost:1313/blog/example-post/</loc>
     <lastmod>2025-01-22T11:11:41+07:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -12,18 +37,28 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/de-docs/overview/</loc>
-    <lastmod>2025-01-22T11:11:41+07:00</lastmod>
+    <loc>http://localhost:1313/de-docs/de-basic/1-gioi-thieu-ve-de/</loc>
+    <lastmod>2023-09-07T16:06:50+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/de-docs/de-basic/2-data-management-architecture/</loc>
+    <lastmod>2023-09-07T16:06:50+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/de-docs/de-basic/3-data-warehouse/</loc>
+    <lastmod>2023-09-07T16:06:50+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/de-docs/de-basic/datawarehouse/</loc>
+    <lastmod>2023-09-07T16:06:50+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/docs/overview/</loc>
     <lastmod>2025-01-20T05:38:29+07:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/de-docs/spark/</loc>
-    <lastmod>2025-01-22T11:11:41+07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -114,6 +149,11 @@
   </url><url>
     <loc>http://localhost:1313/docs/ly-thuyet/7.-vpn-direct-connect-loadbalancer-extraresources/</loc>
     <lastmod>2025-02-19T22:39:08+07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/docs/ly-thuyet/8.-amazon-elastic-compute-cloud-ec2/</loc>
+    <lastmod>2025-02-27T18:43:38+07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>

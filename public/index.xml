@@ -7,14 +7,49 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Copyright (c) 2020-2024 Thulite</copyright>
-    <lastBuildDate>Wed, 19 Feb 2025 22:39:08 +0700</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jan 2025 23:56:13 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data Warehouse cơ bản</title>
+      <link>http://localhost:1313/de-docs/de-basic/datawarehouse/data-warehouse-basic/</link>
+      <pubDate>Thu, 07 Sep 2023 16:06:50 +0200</pubDate>
+      <guid>http://localhost:1313/de-docs/de-basic/datawarehouse/data-warehouse-basic/</guid>
+      <description>&lt;style&gt;body {text-align: justify}&lt;/style&gt;&#xD;&#xA;&lt;h3 id=&#34;khái-niệm&#34;&gt;Khái niệm&lt;/h3&gt;&#xA;&lt;p&gt;Một &lt;strong&gt;Enterprise Data Warehouse (EDW)&lt;/strong&gt; là một kho lưu trữ tập trung bao gồm những tài sản dữ liệu có cấu trúc, được chọn lọc, nhất quán và đáng tin cậy.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Kho dữ liệu phân tán và xử lý dữ liệu song song</title>
+      <link>http://localhost:1313/de-docs/de-basic/datawarehouse/dtamsp/</link>
+      <pubDate>Thu, 07 Sep 2023 16:06:50 +0200</pubDate>
+      <guid>http://localhost:1313/de-docs/de-basic/datawarehouse/dtamsp/</guid>
+      <description>&lt;style&gt;body {text-align: justify}&lt;/style&gt;&#xD;&#xA;&lt;p&gt;Chúng ta sẽ tìm hiểu kiến trúc của cụm &lt;strong&gt;Amazon Redshift&lt;/strong&gt;. Có rất nhiều loại node khác nhau trong Redshift, trong hình duới đây sẽ là cụm dựa trên &lt;strong&gt;RA3 nodes&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Columnar Data Storage</title>
+      <link>http://localhost:1313/de-docs/de-basic/datawarehouse/columnar-data-storage/</link>
+      <pubDate>Thu, 07 Sep 2023 16:06:50 +0200</pubDate>
+      <guid>http://localhost:1313/de-docs/de-basic/datawarehouse/columnar-data-storage/</guid>
+      <description>&lt;style&gt;body {text-align: justify}&lt;/style&gt;&#xD;&#xA;&lt;p&gt;Một modern data warehouse còn được tăng hiệu suất thông qua việc lưu trữ &lt;strong&gt;column-oriented (hướng cột)&lt;/strong&gt; và &lt;strong&gt;data compression (nén dữ liệu)&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Example Post</title>
       <link>http://localhost:1313/blog/example-post/</link>
       <pubDate>Mon, 20 Jan 2025 16:27:22 +0200</pubDate>
       <guid>http://localhost:1313/blog/example-post/</guid>
       <description>You can use blog posts for announcing product updates and features.</description>
+    </item>
+    <item>
+      <title>1. Giới thiệu về Data Engineer</title>
+      <link>http://localhost:1313/de-docs/de-basic/1-gioi-thieu-ve-de/</link>
+      <pubDate>Thu, 07 Sep 2023 16:06:50 +0200</pubDate>
+      <guid>http://localhost:1313/de-docs/de-basic/1-gioi-thieu-ve-de/</guid>
+      <description>&lt;style&gt;body {text-align: justify}&lt;/style&gt;&#xD;&#xA;&lt;h3 id=&#34;vai-trò-của-một-data-engineer&#34;&gt;Vai trò của một Data Engineer.&lt;/h3&gt;&#xA;&lt;p&gt;Vai trò của một &lt;strong&gt;data engineer&lt;/strong&gt; bao gồm:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Thiết kế, triển khai và giám sát pipelines có khả năng tích hợp những dữ liệu thô vào một kho lưu trữ.&lt;/li&gt;&#xA;&lt;li&gt;Chuyển đổi data để tối ưu cho việc phân tích, dựa trên &lt;strong&gt;yêu cầu&lt;/strong&gt; của người tiêu thụ data (&lt;strong&gt;Ví dụ: Data Analysis&lt;/strong&gt;)&lt;/li&gt;&#xA;&lt;li&gt;Khiến dữ liệu luôn sẵn sàng cho nhiều data consumers sử dụng các tool mà họ chọn.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Đồng thời DE cũng phải tuân thủ với tất cả những yêu cầu về bảo mật và pháp luật khi thực hiện các nhiệm vụ trên.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>2. Data Management Architectures</title>
+      <link>http://localhost:1313/de-docs/de-basic/2-data-management-architecture/</link>
+      <pubDate>Thu, 07 Sep 2023 16:06:50 +0200</pubDate>
+      <guid>http://localhost:1313/de-docs/de-basic/2-data-management-architecture/</guid>
+      <description>&lt;style&gt;body {text-align: justify}&lt;/style&gt;&#xD;&#xA;&lt;h3 id=&#34;databases-và-data-warehouses&#34;&gt;Databases và Data Warehouses&lt;/h3&gt;&#xA;&lt;p&gt;Có 2 loại hệ thống cơ sở dữ liệu, và cả 2 đều được sử dụng cho rất nhiều năm:&lt;/p&gt;</description>
     </item>
     <item>
       <title>1. Giới thiệu về Spark</title>
@@ -43,41 +78,6 @@
       <pubDate>Thu, 07 Sep 2023 16:04:48 +0200</pubDate>
       <guid>http://localhost:1313/de-docs/spark/spark-application-concept/</guid>
       <description>&lt;style&gt;body {text-align: justify}&lt;/style&gt;&#xD;&#xA;&lt;h3 id=&#34;một-số-khái-niệm-cần-biết&#34;&gt;Một số khái niệm cần biết:&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;&lt;em&gt;Application:&lt;/em&gt;&lt;/strong&gt;&#xA;&lt;br&gt;&#xA;Một chương trình người dùng được xây dựng trên Spark và sử dụng API của nó. Bao gồm chương trình điều khiển (driver program) và executors trong cụm.&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;strong&gt;&lt;em&gt;SparkSession&lt;/em&gt;&lt;/strong&gt;&#xA;&lt;br&gt;&#xA;Một đối tượng cung cấp điểm vào để tương tác với các chức năng của Spark.&#xA;Trong Spark Shell đã cung cấp sẵn SparkSession cho bạn nhưng trong Spark Application, bạn phải tự tạo SparkSession riêng.&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;strong&gt;&lt;em&gt;Job&lt;/em&gt;&lt;/strong&gt;&#xA;&lt;br&gt;&#xA;Một chương chình tính toán song song bao gồm nhiều tác vụ được tạo ra để phản hồi cho một Spark action (ví dụ: save(), collect())&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;strong&gt;&lt;em&gt;Stage&lt;/em&gt;&lt;/strong&gt;&#xA;&lt;br&gt;&#xA;Mỗi job được phân chia thành các tác vụ nhỏ hơn được gọi là stages, chúng phụ thuộc lẫn nhau.&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;strong&gt;&lt;em&gt;Task&lt;/em&gt;&lt;/strong&gt;&#xA;&lt;br&gt;&#xA;Một đơn vị công việc (work) hay thực thi (executor) được gửi cho Spark Executor.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>5. DataFrame API</title>
-      <link>http://localhost:1313/de-docs/spark/dataframe-api/</link>
-      <pubDate>Thu, 07 Sep 2023 16:04:48 +0200</pubDate>
-      <guid>http://localhost:1313/de-docs/spark/dataframe-api/</guid>
-      <description>&lt;style&gt;body {text-align: justify}&lt;/style&gt;&#xD;&#xA;&lt;p&gt;Spark DataFrame được lấy cảm hứng từ pandas DataFrame về cấu trúc, định dạng và một số thao tác cụ thể. Ví dụ về một Spark DataFrame được hiển thị tại Hình 1.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>6. Một số thao tác với DataFrame</title>
-      <link>http://localhost:1313/de-docs/spark/common-dataframe-operation/</link>
-      <pubDate>Thu, 07 Sep 2023 16:04:48 +0200</pubDate>
-      <guid>http://localhost:1313/de-docs/spark/common-dataframe-operation/</guid>
-      <description>&lt;style&gt;body {text-align: justify}&lt;/style&gt;&#xD;&#xA;&lt;h3 id=&#34;dataframereader-và-dataframe-writer&#34;&gt;DataFrameReader và DataFrame Writer&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;DataFrameReader&lt;/strong&gt; cho phép bạn đọc data từ nhiều nguồn khác nhau vào DataFrame, ví dụ JSON, CSV, Parquet, Text, Arvo, ORC, &amp;hellip;&#xA;&lt;br&gt;&#xA;&lt;strong&gt;DataFrameWriter&lt;/strong&gt; cho phép bạn ghi DataFrame vào nguồn data dưới một định dạng cụ thể.&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;Cùng bắt đầu với một ví dụ, chúng ta sẽ đọc một file CSV lớn chứa dữ liệu từ San Franciso Fire Department calls. Bao gồm 28 cột và 4,380,660 records.&#xA;Dữ liệu bạn có thể tải &lt;a href=&#34;https://github.com/databricks/LearningSparkV2/tree/master&#34;&gt;tại đây&lt;/a&gt;. Với một lượng dữ liệu lớn thì việc tự định nghĩa schema mang lại hiệu quả tốt hơn so với Spark tự xác định schema.&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;Cùng xem cách để làm ví dụ này:&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>7. Bài tập DataFrame lần 1</title>
-      <link>http://localhost:1313/de-docs/spark/bai-tap-lan-mot/</link>
-      <pubDate>Thu, 07 Sep 2023 16:04:48 +0200</pubDate>
-      <guid>http://localhost:1313/de-docs/spark/bai-tap-lan-mot/</guid>
-      <description>&lt;style&gt;body {text-align: justify}&lt;/style&gt;&#xD;&#xA;&lt;h3 id=&#34;đề-bài&#34;&gt;Đề bài&lt;/h3&gt;&#xA;&lt;p&gt;Hãy sử dụng data set San Francisco Fire Department và sử dụng Spark để thực hiện các yêu cầu sau:&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Lời mở đầu</title>
-      <link>http://localhost:1313/de-docs/overview/loi-mo-dau/</link>
-      <pubDate>Thu, 07 Sep 2023 16:04:48 +0200</pubDate>
-      <guid>http://localhost:1313/de-docs/overview/loi-mo-dau/</guid>
-      <description>&lt;style&gt;body {text-align: justify}&lt;/style&gt;</description>
-    </item>
-    <item>
-      <title>Lời mở đầu</title>
-      <link>http://localhost:1313/docs/overview/l%E1%BB%9Di-m%E1%BB%9F-%C4%91%E1%BA%A7u/</link>
-      <pubDate>Thu, 07 Sep 2023 16:04:48 +0200</pubDate>
-      <guid>http://localhost:1313/docs/overview/l%E1%BB%9Di-m%E1%BB%9F-%C4%91%E1%BA%A7u/</guid>
-      <description>&lt;style&gt;body {text-align: justify}&lt;/style&gt;&#xD;&#xA;&lt;h4 id=&#34;giới-thiệu-bản-thân&#34;&gt;Giới thiệu bản thân&lt;/h4&gt;&#xA;&lt;p&gt;Xin chào mình tên là Lương Tiến Dũng. Là sinh viên công nghệ thông tin năm thứ 2 tại trường đại học Giao thông Vận tải.&#xA;Đang theo đuổi con đường trở thành một Data Engineer.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

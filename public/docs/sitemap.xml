@@ -77,6 +77,12 @@
         <priority>0.5</priority>
       </url>
       <url>
+        <loc>http://localhost:1313/docs/ly-thuyet/8.-amazon-elastic-compute-cloud-ec2/</loc>
+        <lastmod>2025-02-27T18:43:38+07:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
         <loc>http://localhost:1313/docs/thuc-hanh/th%E1%BB%B1c-h%C3%A0nh-l%E1%BA%A7n-1/</loc>
         <lastmod>2025-01-22T11:11:41+07:00</lastmod>
         <changefreq>monthly</changefreq>

@@ -1,0 +1,643 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preload" href="http://localhost:1313/fonts/vendor/jost/jost-v4-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="http://localhost:1313/fonts/vendor/jost/jost-v4-latin-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="http://localhost:1313/fonts/vendor/jost/jost-v4-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+<script 
+  src="/js/color-mode.f14b3e296de1d0b69e75af684b62a4a912a2cadab04e36123407cd8388204f1d.js"
+  integrity="sha256-8Us&#43;KW3h0Laeda9oS2KkqRKiytqwTjYSNAfNg4ggTx0=">
+</script>
+
+
+<link rel="stylesheet" href="/main.063a2364eb8f0a48e6f24eac46a8b495d91b9bc47ab7c2040387ce5630f740fb383028ef88bc4a1ecfc51ce60bdb8431823c0df1b93f70c88496a58a967e957e.css" integrity="sha512-BjojZOuPCkjm8k6sRqi0ldkbm8R6t8IEA4fOVjD3QPs4MCjviLxKHs/FHOYL24QxgjwN8bk/cMiElqWKln6Vfg==" crossorigin="anonymous">
+
+<noscript><style>img.lazyload { display: none; }</style></noscript><base href="http://localhost:1313/de-docs/de-basic/2-data-management-architecture/">
+
+  <link rel="canonical" href="http://localhost:1313/de-docs/de-basic/2-data-management-architecture/">
+
+
+<title>2. Data Management Architectures  |  Dũng&#39;s Blog</title>
+<meta name="description" content="Congrats on setting up a new Doks project!">
+
+    
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    
+      <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    
+      <link
+        rel="apple-touch-icon"
+        href="/apple-touch-icon.png"
+        sizes="180x180"
+        type="image/png"
+      >
+      <link
+        rel="icon"
+        href="/favicon-192x192.png"
+        sizes="192x192"
+        type="image/png"
+      >
+      <link
+        rel="icon"
+        href="/favicon-512x512.png"
+        sizes="512x512"
+        type="image/png"
+      >
+<link rel="manifest" href="/manifest.webmanifest">
+
+<meta property="og:url" content="http://localhost:1313/de-docs/de-basic/2-data-management-architecture/">
+  <meta property="og:site_name" content="Dũng&#39;s Blog">
+  <meta property="og:title" content="2. Data Management Architectures">
+  <meta property="og:description" content="Databases và Data Warehouses Có 2 loại hệ thống cơ sở dữ liệu, và cả 2 đều được sử dụng cho rất nhiều năm:">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="de-docs">
+    <meta property="article:published_time" content="2023-09-07T16:06:50+02:00">
+    <meta property="article:modified_time" content="2023-09-07T16:06:50+02:00">
+    <meta property="og:image" content="http://localhost:1313/cover.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/cover.png">
+  <meta name="twitter:title" content="2. Data Management Architectures">
+  <meta name="twitter:description" content="Databases và Data Warehouses Có 2 loại hệ thống cơ sở dữ liệu, và cả 2 đều được sử dụng cho rất nhiều năm:">
+      <meta name="twitter:site" content="@getdoks">
+
+    
+    
+    <script type="application/ld+json">
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/",
+       "name": "Kho Kiến Thức Của Dũng",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/de-docs/",
+       "name": "De Docs",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/de-docs/de-basic/",
+       "name": "Data Engineer Cơ Bản",
+       "position": 3
+     },
+     {
+       "@type": "ListItem",
+       "name": "2. Data Management Architectures",
+       "position": 4
+     }
+   ]
+ }
+</script>
+
+
+
+
+
+</head>
+
+  
+  <body class="single section de-docs" data-bs-spy="scroll" data-bs-target="#toc" data-bs-root-margin="0px 0px -60%" data-bs-smooth-scroll="true" tabindex="0">
+    <div class="sticky-top">
+<div class="header-bar"></div>
+<header class="navbar navbar-expand-lg">
+  <div class="container-lg">
+  
+    <a class="navbar-brand me-auto me-lg-3" href="/">Dũng&#39;s Blog</a>
+
+    
+    
+    <button type="button" id="searchToggleMobile" class="btn btn-link nav-link mx-2 d-lg-none" aria-label="Search website">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <circle cx="10" cy="10" r="7"></circle>
+        <line x1="21" y1="21" x2="15" y2="15"></line>
+      </svg>
+    </button>
+    
+    <button class="btn btn-link d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavSection" aria-controls="offcanvasNavSection" aria-label="Open section navigation menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots-vertical" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+        <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+        <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+      </svg>
+    </button>
+    <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasNavSection" aria-labelledby="offcanvasNavSectionLabel">
+      <div class="header-bar"></div>
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavSectionLabel">De docs</h5>
+        <button type="button" class="btn btn-link nav-link p-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="offcanvas-body">
+        <aside class="doks-sidebar mt-n3">
+          <nav id="doks-docs-nav" aria-label="Tertiary navigation">
+            
+  
+    
+<nav class="section-nav docs-links">
+  <ul class="list-unstyled">
+
+  <li>
+    <details open>
+      <summary>Giới thiệu</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/de-docs/overview/loi-mo-dau/">Lời mở đầu</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open open>
+      <summary>Data Engineer Cơ Bản</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/de-docs/de-basic/1-gioi-thieu-ve-de/">1. Giới thiệu về Data Engineer</a>
+  </li>
+
+  <li class="active" >
+      <a aria-current="page" href="/de-docs/de-basic/2-data-management-architecture/">2. Data Management Architectures</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>3. Data Warehouse</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/de-docs/de-basic/datawarehouse/data-warehouse-basic/">Data Warehouse cơ bản</a>
+  </li>
+
+  <li>
+      <a href="/de-docs/de-basic/datawarehouse/dtamsp/">Kho dữ liệu phân tán và xử lý dữ liệu song song</a>
+  </li>
+
+  <li>
+      <a href="/de-docs/de-basic/datawarehouse/columnar-data-storage/">Columnar Data Storage</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Mở đầu về Spark</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/de-docs/spark/khai-niem/">1. Giới thiệu về Spark</a>
+  </li>
+
+  <li>
+      <a href="/de-docs/spark/thanh-phan-cua-spark/">2. Thành phần của Spark</a>
+  </li>
+
+  <li>
+      <a href="/de-docs/spark/cach-hoat-dong/">3. Cách Spark hoạt động</a>
+  </li>
+
+  <li>
+      <a href="/de-docs/spark/spark-application-concept/">4. Các khái niệm Spark Application</a>
+  </li>
+
+  <li>
+      <a href="/de-docs/spark/dataframe-api/">5. DataFrame API</a>
+  </li>
+
+  <li>
+      <a href="/de-docs/spark/common-dataframe-operation/">6. Một số thao tác với DataFrame</a>
+  </li>
+
+  <li>
+      <a href="/de-docs/spark/bai-tap-lan-mot/">7. Bài tập DataFrame lần 1</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+  </ul>
+</nav>
+
+  
+
+          </nav>
+        </aside>
+      </div>
+    </div>
+    
+    <button class="btn btn-link nav-link mx-2 order-3 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavMain" aria-controls="offcanvasNavMain" aria-label="Open main navigation menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <line x1="4" y1="8" x2="20" y2="8"></line>
+        <line x1="4" y1="16" x2="20" y2="16"></line>
+      </svg>
+    </button>
+
+    
+    <div class="offcanvas offcanvas-end h-auto" tabindex="-1" id="offcanvasNavMain" aria-labelledby="offcanvasNavMainLabel">
+      <div class="header-bar d-lg-none"></div>
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavMainLabel">Dũng&#39;s Blog</h5>
+        <button type="button" class="btn btn-link nav-link p-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+         </svg>
+        </button>
+      </div>
+      
+      <div class="offcanvas-body d-flex flex-column flex-lg-row justify-content-between">
+        <ul class="navbar-nav flex-grow-1"><li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/docs/overview/l%E1%BB%9Di-m%E1%BB%9F-%C4%91%E1%BA%A7u/">Tài liệu AWS</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/de-docs/overview/loi-mo-dau/">Tài liệu Data Engineer</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/blog/">Bài viết</a>
+              </li>
+            </ul>
+
+        
+        
+        <button type="button" id="searchToggleDesktop" class="btn btn-link nav-link p-2 d-none d-lg-block" aria-label="Search website">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <circle cx="10" cy="10" r="7"></circle>
+            <line x1="21" y1="21" x2="15" y2="15"></line>
+          </svg>
+        </button>
+        
+        
+        
+        <button id="buttonColorMode" class="btn btn-link mx-auto nav-link p-0 ms-lg-2 me-lg-1" type="button" aria-label="Toggle theme">
+          <svg data-bs-theme-value="dark" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+          </svg>
+          <svg data-bs-theme-value="light" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0m-5 0h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>
+          </svg>
+        </button>
+        
+        <ul id="socialMenu" class="nav mx-auto flex-row order-lg-4">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/ltdungg"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path></svg><small class="ms-2 visually-hidden">GitHub</small></a>
+            </li>
+          </ul>
+        
+        </div>
+    </div>
+
+    
+    </div>
+</header>
+</div>
+
+<div class="modal" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-fullscreen-md-down">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 visually-hidden" id="searchModalLabel">Search</h1>
+        <button type="button" class="btn-close visually-hidden" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="search-input flex-grow-1 d-none">
+          <form id="search-form" class="search-form" action="#" method="post" accept-charset="UTF-8" role="search">
+            <label for="query" class="visually-hidden">Search</label>
+            <div class="d-flex">
+              <input type="search" id="query" name="query" class="search-text form-control form-control-lg" placeholder="Search" aria-label="Search" maxlength="128" autocomplete="off">
+              <button type="button" class="btn btn-link text-decoration-none px-0 ms-3 d-md-none" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-body">
+        <p class="search-loading status message d-none mt-3 text-center">Loading search index…</p>
+        <p class="search-no-recent message d-none mt-3 text-center">No recent searches</p>
+        <p class="search-no-results message d-none mt-3 text-center">No results for "<strong><span class="query-no-results">Query here</span></strong>"</p>
+        <div id="searchResults" class="search-results"></div>
+        <template>
+          <article class="search-result list-view">
+            <div class="card my-3">
+              <div class="card-body">
+                <header>
+                  <h2 class="h5 title title-submitted mb-0"><a class="stretched-link text-decoration-none text-reset" href="#">Title here</a></h2>
+                  <div class="submitted d-none"><time class="created-date">Date here</time></div>
+                </header>
+                <div class="content">Summary here</div>
+              </div>
+            </div>
+          </article>
+        </template>
+      </div>
+      <div class="modal-footer">
+        <ul class="list-inline me-auto d-none d-md-block">
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Enter key" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M12 3.53088v3c0 1-1 2-2 2H4M7 11.53088l-3-3 3-3"></path></g></svg></kbd><span class="DocSearch-Label">to select</span></li>
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Arrow down" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M7.5 3.5v8M10.5 8.5l-3 3-3-3"></path></g></svg></kbd><kbd class="me-2"><svg width="15" height="15" aria-label="Arrow up" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M7.5 11.5v-8M10.5 6.5l-3-3-3 3"></path></g></svg></kbd><span class="DocSearch-Label">to navigate</span></li>
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Escape key" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M13.6167 8.936c-.1065.3583-.6883.962-1.4875.962-.7993 0-1.653-.9165-1.653-2.1258v-.5678c0-1.2548.7896-2.1016 1.653-2.1016.8634 0 1.3601.4778 1.4875 1.0724M9 6c-.1352-.4735-.7506-.9219-1.46-.8972-.7092.0246-1.344.57-1.344 1.2166s.4198.8812 1.3445.9805C8.465 7.3992 8.968 7.9337 9 8.5c.032.5663-.454 1.398-1.4595 1.398C6.6593 9.898 6 9 5.963 8.4851m-1.4748.5368c-.2635.5941-.8099.876-1.5443.876s-1.7073-.6248-1.7073-2.204v-.4603c0-1.0416.721-2.131 1.7073-2.131.9864 0 1.6425 1.031 1.5443 2.2492h-2.956"></path></g></svg></kbd><span class="DocSearch-Label">to close</span></li>
+        </ul>
+        <p class="d-md-none">Search by <a class="text-decoration-none" href="https://github.com/nextapps-de/flexsearch">FlexSearch</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="wrap container-lg" role="document">
+      <div class="content">
+      
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar docs-sidebar-offset d-none d-lg-block">
+			
+  
+    
+<nav class="section-nav docs-links">
+  <ul class="list-unstyled">
+
+  <li>
+    <details open>
+      <summary>Giới thiệu</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/de-docs/overview/loi-mo-dau/">Lời mở đầu</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open open>
+      <summary>Data Engineer Cơ Bản</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/de-docs/de-basic/1-gioi-thieu-ve-de/">1. Giới thiệu về Data Engineer</a>
+  </li>
+
+  <li class="active" >
+      <a aria-current="page" href="/de-docs/de-basic/2-data-management-architecture/">2. Data Management Architectures</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>3. Data Warehouse</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/de-docs/de-basic/datawarehouse/data-warehouse-basic/">Data Warehouse cơ bản</a>
+  </li>
+
+  <li>
+      <a href="/de-docs/de-basic/datawarehouse/dtamsp/">Kho dữ liệu phân tán và xử lý dữ liệu song song</a>
+  </li>
+
+  <li>
+      <a href="/de-docs/de-basic/datawarehouse/columnar-data-storage/">Columnar Data Storage</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Mở đầu về Spark</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/de-docs/spark/khai-niem/">1. Giới thiệu về Spark</a>
+  </li>
+
+  <li>
+      <a href="/de-docs/spark/thanh-phan-cua-spark/">2. Thành phần của Spark</a>
+  </li>
+
+  <li>
+      <a href="/de-docs/spark/cach-hoat-dong/">3. Cách Spark hoạt động</a>
+  </li>
+
+  <li>
+      <a href="/de-docs/spark/spark-application-concept/">4. Các khái niệm Spark Application</a>
+  </li>
+
+  <li>
+      <a href="/de-docs/spark/dataframe-api/">5. DataFrame API</a>
+  </li>
+
+  <li>
+      <a href="/de-docs/spark/common-dataframe-operation/">6. Một số thao tác với DataFrame</a>
+  </li>
+
+  <li>
+      <a href="/de-docs/spark/bai-tap-lan-mot/">7. Bài tập DataFrame lần 1</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+  </ul>
+</nav>
+
+  
+
+		</div>
+		
+		<nav class="docs-toc docs-toc-offset d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="page-links">
+  <h3>On this page</h3>
+    <nav id="toc">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#databases-và-data-warehouses">Databases và Data Warehouses</a></li>
+        <li><a href="#dealing-with-big-unstructured-data">Dealing with big, unstructured data</a></li>
+        <li><a href="#cloud-based-solutions-for-big-data-analytic">Cloud-based solutions for big data analytic</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9">
+		
+			<h1>2. Data Management Architectures</h1>
+			
+			<nav class="toc-mobile d-xl-none" aria-label="Quaternary navigation">
+				<details>
+    <summary>On this page</summary>
+    <div class="page-links">
+      <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#databases-và-data-warehouses">Databases và Data Warehouses</a></li>
+        <li><a href="#dealing-with-big-unstructured-data">Dealing with big, unstructured data</a></li>
+        <li><a href="#cloud-based-solutions-for-big-data-analytic">Cloud-based solutions for big data analytic</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+  </details>
+
+			</nav>
+			<style>body {text-align: justify}</style>
+<h3 id="databases-và-data-warehouses">Databases và Data Warehouses<a href="#databases-và-data-warehouses" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Có 2 loại hệ thống cơ sở dữ liệu, và cả 2 đều được sử dụng cho rất nhiều năm:</p>
+<ul>
+<li><strong>Online Transaction Processing (OLTP)</strong>: Là hệ thống được sử dụng với mục đích chính là lưu trữ và cập nhật những <strong>transactional data</strong> (Dữ liệu giao dịch) với khối lượng lớn.
+<ul>
+<li>Ví dụ: Loại OLTP databases thường được sử dụng để lưu trữ customer records (hồ sơ khách hàng), bao gồm chi tiết giao dịch như việc mua hàng, trả hàng, hoàn tiền,&hellip;</li>
+</ul>
+</li>
+<li><strong>Online Analytical Processing (OLAP)</strong>: Là hệ thống được sử dụng với mục đích chính là xây dựng báo cáo trên khối lượng lớn dữ liệu. Ta thường thấy hệ thống OLAP sẽ lấy dữ liệu từ các OLTP databases, và cung cấp một kho lưu trữ chung cho thể sử dụng cho mục đích báo cáo.</li>
+</ul>
+<p>Vào những năm 90s, các công ty lớn có hàng chục hay hàng trăm databases thường là OLTP, và khả năng để phân tích thông qua các hệ thống đó hạn chế.</p>
+<p>Sau đó kết quả là, Data Warehouses (OLAP systems) được phổ biến là hệ thống có thể tích hợp nhiều database systems vào một kho lưu trữ chung, tập trung vào việc phân tích.</p>
+<p>Data Warehouse được thiết kế để lưu trữ <strong>dữ liệu được tích hợp, quản lý và độ tin cậy cao</strong>, rất có cấu trúc (well-defined schema)</p>
+<h3 id="dealing-with-big-unstructured-data">Dealing with big, unstructured data<a href="#dealing-with-big-unstructured-data" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Trong khi Data Warehouses truyền thống tốt trong việc lưu trữ và quản lý dữ liệu cấu trúc dạng bảng, tổ chức dưới các lược đồ quan hệ.
+Nhưng nó lại không phù hợp để xử lý một lượng lớn semi-structured và unstructured data đang dẫn trở nên phổ biến.</p>
+<p>Sau đó, vào năm 2010, một công cụ xử lý dữ liệu lớn trở nên phổ biến. <strong>Hadoop</strong> là một framework mã nguồn mở để xử lý lượng lớn datasets trên các cụm máy tính, đi đầu trong việc xử lý big data.
+Các cụm bao gồm hằng chục, hàng trăm máy móc được gắn với ổ cứng có thể lưu trữ hàng ngàn terabytes dữ liệu được quản lý dưới một distributed filesystem hay còn gọi là <strong>Hadoop Distributed File System (HDFS)</strong>.</p>
+<p>Nhưng để cài đặt Hadoop clusters thường cần lượng lớn tiền đầu tư ban đầu cho máy móc và ổ cứng. Và cần các team chuyên biệt để xử lý những yêu cầu bao gồm:</p>
+<ul>
+<li>Hadoop administrators specialized cho cụm, phần cứng và phần mềm</li>
+<li>Data Engineer specialized trong việc dùng các framework xử lý dữ liệu lớn như Spark, Hive, và Presto</li>
+</ul>
+<h3 id="cloud-based-solutions-for-big-data-analytic">Cloud-based solutions for big data analytic<a href="#cloud-based-solutions-for-big-data-analytic" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Dựa vào những yêu cầu cao đó, nhiều tổ chức đã sử dụng cloud là một giải pháp để xử lý big data, với các lợi ích:</p>
+<ul>
+<li>On-demand capacity (Năng lực theo yêu cầu)</li>
+<li>Limitless and elastic scaling (Không hạn chế và mở rộng tùy ý)</li>
+<li>Global footprint (Có thể đặt trên toàn cầu)</li>
+<li>Usage-based cost models (Mô hình chi phí theo những gì sử dụng)</li>
+<li>Freedom from managing hardware (Tự do quản lý phần cứng)</li>
+</ul>
+<p>Các công ty lớn như <strong>Amazon Web Services (AWS), Google Cloud Platform (GCP), Microsoft Azure, Snowflake và Databricks</strong> cung cấp rất nhiều giải pháp để tích hợp, lưu trữ và phân tích lượng lớn dữ liệu trên cloud.</p>
+<p>Với việc lưu trữ trên cloud objects stores đã cho phép tổ chức xây dựng một cách quản lý data mới có thể lưu trữ mọi data (structured, semi-structured, unstructured) và có thể scale mọi kích cỡ, được gọi là <strong>data lake</strong>.
+Với phương pháp này, tất cả dữ liệu được tích hợp vào, xử lý và lưu trữ trong data lake, sau đó những dữ liệu cần độ trễ thấp (lower-latency) sẽ được load vào cloud data warehouse.</p>
+<p>Trong những năm gần đây, một khai niệm mới được được đặt ra có thể tích hợp được tối ưu khả năng của cả data lakes và data warehousing, được gọi là <strong>data lakehouse</strong>, đã có những giải pháp từ các công ty như (AWS, GCP, Snowflake và Databricks), cũng như là các công cụ mã nguồn mở (Apache Hudi và Apache Iceberg) cũng đề cập đến data lakehouse.
+Với các khả năng:</p>
+<ul>
+<li>Tích hợp nhanh chóng mọi loại dữ liêu.</li>
+<li>Lưu trữ và xử lý nhiều petabytes cho dữ liệu unstructured, semi-structured và structured</li>
+<li>Hỗ trợ <strong>ACID</strong> (đề cập đến 4 thuộc tính của một giao dịch - là atomicity (tính nguyên tử), consistency (tính nhất quán), isolation (tính độc lập) và durability (độ bền cao) cho phép nhiều người dùng đồng thời read, insert, update, và delete các hàng được quản lý bởi data lakehouse)</li>
+<li>Độ trễ truy cập dữ liệu thấp.</li>
+<li>Khả năng tiêu thụ dữ liệu với nhiều tool, bao gồm SQL, Spark, machine learning và BI tools.</li>
+</ul>
+
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				</div>
+			<div class="page-nav d-flex flex-column flex-sm-row">
+	
+	<div class="card w-100">
+			<div class="card-body d-flex">
+				<div class="d-flex flex-column justify-content-center">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-left" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+						<path d="M5 12l14 0"></path>
+						<path d="M5 12l6 6"></path>
+						<path d="M5 12l6 -6"></path>
+				 	</svg>
+				</div>
+				<div class="d-flex flex-column">
+					<div class="text-body-secondary">Prev</div>
+					<a href="/de-docs/de-basic/1-gioi-thieu-ve-de/" class="stretched-link text-reset text-decoration-none">1. Giới thiệu về Data Engineer</a>
+				</div>
+			</div>
+		</div>
+	<div class="m-2"></div>
+	<div class="card text-end w-100">
+			<div class="card-body d-flex justify-content-end">
+				<div class="d-flex flex-column">
+					<div class="text-body-secondary">Next</div>
+					<a href="/de-docs/spark/khai-niem/" class="stretched-link text-reset text-decoration-none">1. Giới thiệu về Spark</a>
+				</div>
+				<div class="d-flex flex-column justify-content-center">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+						<path d="M5 12l14 0"></path>
+						<path d="M13 18l6 -6"></path>
+						<path d="M13 6l6 6"></path>
+					</svg>
+				</div>
+			</div>
+		</div>
+	</div>
+
+			
+		</main>
+		
+	</div>
+
+      
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-lg">
+    <div class="row">
+      <div class="col-lg-8 text-center text-lg-start">
+        <ul class="list-inline">
+          <li class="list-inline-item"><a class="text-muted" href="/privacy/">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 text-center text-lg-end">
+        <ul class="list-inline">
+          <li class="list-inline-item">Được tạo bởi Dũng Lương</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    
+
+<script async
+  src="/js/app.70b4fc255213028d0754da1f19e3048ceb95f97b9f3dba08cec9b12e1f89c3a0.js"
+  integrity="sha256-cLT8JVITAo0HVNofGeMEjOuV&#43;XufPboIzsmxLh&#43;Jw6A=">
+</script>
+
+
+
+
+
+<script async
+  src="/js/flexsearch.f5ccd5c9fcb1730536551bbcb7385a5c46d2ad164806184dd54a219982ee2c84.js"
+  integrity="sha256-9czVyfyxcwU2VRu8tzhaXEbSrRZIBhhN1UohmYLuLIQ=">
+</script>
+<script async
+  src="/js/search-modal.19d8681c7ab3f0ef428bde58a53831c073a4a4d405dafa3ed47b9063c8929768.js"
+  integrity="sha256-GdhoHHqz8O9Ci95YpTgxwHOkpNQF2vo&#43;1HuQY8iSl2g=">
+</script>
+
+    
+  </body>
+</html>
