@@ -1,5 +1,5 @@
 title = "Dũng's Blog"
-baseurl = "http://localhost/"
+baseurl = "https://github.com/ltdungg/my-learning-docs"
 canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true
