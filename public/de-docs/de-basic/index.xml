@@ -7,17 +7,17 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Copyright (c) 2020-2024 Thulite</copyright>
-    <lastBuildDate>Thu, 07 Sep 2023 16:06:50 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 28 Feb 2025 16:48:06 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/de-docs/de-basic/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>1. Giới thiệu về Data Engineer</title>
+      <title>Giới thiệu về Data Engineer</title>
       <link>http://localhost:1313/de-docs/de-basic/1-gioi-thieu-ve-de/</link>
       <pubDate>Thu, 07 Sep 2023 16:06:50 +0200</pubDate>
       <guid>http://localhost:1313/de-docs/de-basic/1-gioi-thieu-ve-de/</guid>
       <description>&lt;style&gt;body {text-align: justify}&lt;/style&gt;&#xD;&#xA;&lt;h3 id=&#34;vai-trò-của-một-data-engineer&#34;&gt;Vai trò của một Data Engineer.&lt;/h3&gt;&#xA;&lt;p&gt;Vai trò của một &lt;strong&gt;data engineer&lt;/strong&gt; bao gồm:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Thiết kế, triển khai và giám sát pipelines có khả năng tích hợp những dữ liệu thô vào một kho lưu trữ.&lt;/li&gt;&#xA;&lt;li&gt;Chuyển đổi data để tối ưu cho việc phân tích, dựa trên &lt;strong&gt;yêu cầu&lt;/strong&gt; của người tiêu thụ data (&lt;strong&gt;Ví dụ: Data Analysis&lt;/strong&gt;)&lt;/li&gt;&#xA;&lt;li&gt;Khiến dữ liệu luôn sẵn sàng cho nhiều data consumers sử dụng các tool mà họ chọn.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Đồng thời DE cũng phải tuân thủ với tất cả những yêu cầu về bảo mật và pháp luật khi thực hiện các nhiệm vụ trên.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>2. Data Management Architectures</title>
+      <title>Data Management Architectures</title>
       <link>http://localhost:1313/de-docs/de-basic/2-data-management-architecture/</link>
       <pubDate>Thu, 07 Sep 2023 16:06:50 +0200</pubDate>
       <guid>http://localhost:1313/de-docs/de-basic/2-data-management-architecture/</guid>

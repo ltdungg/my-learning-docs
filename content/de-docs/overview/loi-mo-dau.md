@@ -21,3 +21,4 @@ seo:
 **Bản quyền đến từ những tác phẩm sau:**
 - Data Engineering with AWS (Second Edition) bởi Gareth Eagar
 - Learning Spark Lightning-Fast Data Analytics (2nd Edition) bởi nhiều tác giả.
+- Kafka The Definitive Guide

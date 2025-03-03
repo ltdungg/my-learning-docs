@@ -1,11 +1,11 @@
 ---
-title: "2. Data Management Architectures"
+title: "Data Management Architectures"
 description: ""
 summary: ""
 date: 2023-09-07T16:06:50+02:00
 lastmod: 2023-09-07T16:06:50+02:00
 draft: false
-weight: 800
+weight: 2
 toc: true
 seo:
   title: "" # custom title (optional)
@@ -13,6 +13,7 @@ seo:
   canonical: "" # custom canonical URL (optional)
   robots: "" # custom robot tags (optional)
 ---
+
 <style>body {text-align: justify}</style>
 
 ### Databases và Data Warehouses

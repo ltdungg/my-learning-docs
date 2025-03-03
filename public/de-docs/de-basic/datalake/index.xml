@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data Lake on Dũng&#39;s Blog</title>
+    <link>http://localhost:1313/de-docs/de-basic/datalake/</link>
+    <description>Recent content in Data Lake on Dũng&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>Copyright (c) 2020-2024 Thulite</copyright>
+    <lastBuildDate>Thu, 07 Sep 2023 16:06:50 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/de-docs/de-basic/datalake/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data Lake cơ bản</title>
+      <link>http://localhost:1313/de-docs/de-basic/datalake/overview/</link>
+      <pubDate>Thu, 07 Sep 2023 16:06:50 +0200</pubDate>
+      <guid>http://localhost:1313/de-docs/de-basic/datalake/overview/</guid>
+      <description>&lt;style&gt;body {text-align: justify}&lt;/style&gt;&#xD;&#xA;&lt;h3 id=&#34;khái-niệm&#34;&gt;Khái niệm&lt;/h3&gt;&#xA;&lt;p&gt;Với việc sử dụng Data Warehouse cho những công việc phân tích các bảng có cấu trúc cao nhưng lại không phù hợp khi lưu trữ những dữ liệu semi-structured và unstructured.&#xA;Mặc dù nó tốt trong công việc xử lý dựa trên SQL nhưng việc xử lý dữ liệu không chỉ dừng lại ở SQL. Ví dụ như trích xuất metadata từ dữ liệu unstructured, như audio hay images, phù hợp với các công cụ machine learning.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

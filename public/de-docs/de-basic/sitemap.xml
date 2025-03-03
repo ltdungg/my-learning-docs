@@ -3,38 +3,95 @@
   
     <url>
       <loc>http://localhost:1313/de-docs/de-basic/1-gioi-thieu-ve-de/</loc>
-      <lastmod>2023-09-07T16:06:50+02:00</lastmod>
+      <lastmod>2025-02-28T16:48:06+07:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
     
     <url>
       <loc>http://localhost:1313/de-docs/de-basic/2-data-management-architecture/</loc>
-      <lastmod>2023-09-07T16:06:50+02:00</lastmod>
+      <lastmod>2025-02-28T16:48:06+07:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
     
     <url>
       <loc>http://localhost:1313/de-docs/de-basic/datawarehouse/</loc>
+      <lastmod>2025-02-28T16:48:06+07:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/de-docs/de-basic/datalake/</loc>
+      <lastmod>2023-09-07T16:06:50+02:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/de-docs/de-basic/datalakehouse/</loc>
+      <lastmod>2023-09-07T16:06:50+02:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/de-docs/de-basic/ingestion-tool/</loc>
       <lastmod>2023-09-07T16:06:50+02:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
     <url>
         <loc>http://localhost:1313/de-docs/de-basic/datawarehouse/data-warehouse-basic/</loc>
-        <lastmod>2023-09-07T16:06:50+02:00</lastmod>
+        <lastmod>2025-02-28T16:48:06+07:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
       <url>
         <loc>http://localhost:1313/de-docs/de-basic/datawarehouse/dtamsp/</loc>
-        <lastmod>2023-09-07T16:06:50+02:00</lastmod>
+        <lastmod>2025-02-28T16:48:06+07:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
       <url>
         <loc>http://localhost:1313/de-docs/de-basic/datawarehouse/columnar-data-storage/</loc>
+        <lastmod>2025-02-28T16:48:06+07:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/de-docs/de-basic/datawarehouse/etl-elt-pipelines/</loc>
+        <lastmod>2023-09-07T16:06:50+02:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/de-docs/de-basic/datalake/overview/</loc>
+        <lastmod>2023-09-07T16:06:50+02:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/de-docs/de-basic/datalakehouse/overview/</loc>
+        <lastmod>2023-09-07T16:06:50+02:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/de-docs/de-basic/ingestion-tool/overview/</loc>
+        <lastmod>2023-09-07T16:06:50+02:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/de-docs/de-basic/ingestion-tool/amazon-dms/</loc>
+        <lastmod>2023-09-07T16:06:50+02:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/de-docs/de-basic/ingestion-tool/amazon-kinesis/</loc>
         <lastmod>2023-09-07T16:06:50+02:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>

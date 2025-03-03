@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data Lakehouse on Dũng&#39;s Blog</title>
+    <link>http://localhost:1313/de-docs/de-basic/datalakehouse/</link>
+    <description>Recent content in Data Lakehouse on Dũng&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>Copyright (c) 2020-2024 Thulite</copyright>
+    <lastBuildDate>Thu, 07 Sep 2023 16:06:50 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/de-docs/de-basic/datalakehouse/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data lakehouse cơ bản</title>
+      <link>http://localhost:1313/de-docs/de-basic/datalakehouse/overview/</link>
+      <pubDate>Thu, 07 Sep 2023 16:06:50 +0200</pubDate>
+      <guid>http://localhost:1313/de-docs/de-basic/datalakehouse/overview/</guid>
+      <description>&lt;style&gt;body {text-align: justify}&lt;/style&gt;&#xD;&#xA;&lt;h3 id=&#34;sự-kết-hợp-tốt-nhất-của-data-warehouses-và-data-lakes&#34;&gt;Sự kết hợp tốt nhất của data warehouses và data lakes&lt;/h3&gt;&#xA;&lt;p&gt;Một data lake phù hợp cho việc lưu trữ tất cả các loại data không tốn kém và cung cấp nhiều tools để làm việc và tiêu thụ data.&#xA;Bao gồm việc transform data với framework như &lt;strong&gt;Apache Spark&lt;/strong&gt;, train model machine learning như &lt;strong&gt;Amazon SageMaker&lt;/strong&gt;, truy vấn dữ liệu bằng SQL như &lt;strong&gt;Amazon Athena, Presto&lt;/strong&gt; hay &lt;strong&gt;Trino&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

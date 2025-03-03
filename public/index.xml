@@ -7,14 +7,63 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Copyright (c) 2020-2024 Thulite</copyright>
-    <lastBuildDate>Wed, 22 Jan 2025 23:56:13 +0700</lastBuildDate>
+    <lastBuildDate>Fri, 28 Feb 2025 16:48:06 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data Lake cơ bản</title>
+      <link>http://localhost:1313/de-docs/de-basic/datalake/overview/</link>
+      <pubDate>Thu, 07 Sep 2023 16:06:50 +0200</pubDate>
+      <guid>http://localhost:1313/de-docs/de-basic/datalake/overview/</guid>
+      <description>&lt;style&gt;body {text-align: justify}&lt;/style&gt;&#xD;&#xA;&lt;h3 id=&#34;khái-niệm&#34;&gt;Khái niệm&lt;/h3&gt;&#xA;&lt;p&gt;Với việc sử dụng Data Warehouse cho những công việc phân tích các bảng có cấu trúc cao nhưng lại không phù hợp khi lưu trữ những dữ liệu semi-structured và unstructured.&#xA;Mặc dù nó tốt trong công việc xử lý dựa trên SQL nhưng việc xử lý dữ liệu không chỉ dừng lại ở SQL. Ví dụ như trích xuất metadata từ dữ liệu unstructured, như audio hay images, phù hợp với các công cụ machine learning.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Data lakehouse cơ bản</title>
+      <link>http://localhost:1313/de-docs/de-basic/datalakehouse/overview/</link>
+      <pubDate>Thu, 07 Sep 2023 16:06:50 +0200</pubDate>
+      <guid>http://localhost:1313/de-docs/de-basic/datalakehouse/overview/</guid>
+      <description>&lt;style&gt;body {text-align: justify}&lt;/style&gt;&#xD;&#xA;&lt;h3 id=&#34;sự-kết-hợp-tốt-nhất-của-data-warehouses-và-data-lakes&#34;&gt;Sự kết hợp tốt nhất của data warehouses và data lakes&lt;/h3&gt;&#xA;&lt;p&gt;Một data lake phù hợp cho việc lưu trữ tất cả các loại data không tốn kém và cung cấp nhiều tools để làm việc và tiêu thụ data.&#xA;Bao gồm việc transform data với framework như &lt;strong&gt;Apache Spark&lt;/strong&gt;, train model machine learning như &lt;strong&gt;Amazon SageMaker&lt;/strong&gt;, truy vấn dữ liệu bằng SQL như &lt;strong&gt;Amazon Athena, Presto&lt;/strong&gt; hay &lt;strong&gt;Trino&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Data Warehouse cơ bản</title>
       <link>http://localhost:1313/de-docs/de-basic/datawarehouse/data-warehouse-basic/</link>
       <pubDate>Thu, 07 Sep 2023 16:06:50 +0200</pubDate>
       <guid>http://localhost:1313/de-docs/de-basic/datawarehouse/data-warehouse-basic/</guid>
       <description>&lt;style&gt;body {text-align: justify}&lt;/style&gt;&#xD;&#xA;&lt;h3 id=&#34;khái-niệm&#34;&gt;Khái niệm&lt;/h3&gt;&#xA;&lt;p&gt;Một &lt;strong&gt;Enterprise Data Warehouse (EDW)&lt;/strong&gt; là một kho lưu trữ tập trung bao gồm những tài sản dữ liệu có cấu trúc, được chọn lọc, nhất quán và đáng tin cậy.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Giới thiệu</title>
+      <link>http://localhost:1313/de-docs/de-basic/ingestion-tool/overview/</link>
+      <pubDate>Thu, 07 Sep 2023 16:06:50 +0200</pubDate>
+      <guid>http://localhost:1313/de-docs/de-basic/ingestion-tool/overview/</guid>
+      <description>&lt;style&gt;body {text-align: justify}&lt;/style&gt;&#xD;&#xA;&lt;p&gt;Bước đầu khi xây dựng giải pháp phân tích big data là &lt;strong&gt;ingest data&lt;/strong&gt; từ nhiều nguồn vào AWS. Trong phần này, ta sẽ cùng tìm hiểu một số thành phần core của AWS service được thiết kế để làm việc này. Tuy nhiên, đây không phải là một đánh giá toàn diện cho tất cả các khả năng để ingesst data vào AWS.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Giới thiệu về Data Engineer</title>
+      <link>http://localhost:1313/de-docs/de-basic/1-gioi-thieu-ve-de/</link>
+      <pubDate>Thu, 07 Sep 2023 16:06:50 +0200</pubDate>
+      <guid>http://localhost:1313/de-docs/de-basic/1-gioi-thieu-ve-de/</guid>
+      <description>&lt;style&gt;body {text-align: justify}&lt;/style&gt;&#xD;&#xA;&lt;h3 id=&#34;vai-trò-của-một-data-engineer&#34;&gt;Vai trò của một Data Engineer.&lt;/h3&gt;&#xA;&lt;p&gt;Vai trò của một &lt;strong&gt;data engineer&lt;/strong&gt; bao gồm:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Thiết kế, triển khai và giám sát pipelines có khả năng tích hợp những dữ liệu thô vào một kho lưu trữ.&lt;/li&gt;&#xA;&lt;li&gt;Chuyển đổi data để tối ưu cho việc phân tích, dựa trên &lt;strong&gt;yêu cầu&lt;/strong&gt; của người tiêu thụ data (&lt;strong&gt;Ví dụ: Data Analysis&lt;/strong&gt;)&lt;/li&gt;&#xA;&lt;li&gt;Khiến dữ liệu luôn sẵn sàng cho nhiều data consumers sử dụng các tool mà họ chọn.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Đồng thời DE cũng phải tuân thủ với tất cả những yêu cầu về bảo mật và pháp luật khi thực hiện các nhiệm vụ trên.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Giới thiệu về Kafka</title>
+      <link>http://localhost:1313/de-docs/kafka/overview/</link>
+      <pubDate>Thu, 07 Sep 2023 16:06:50 +0200</pubDate>
+      <guid>http://localhost:1313/de-docs/kafka/overview/</guid>
+      <description>&lt;style&gt;body {text-align: justify}&lt;/style&gt;</description>
+    </item>
+    <item>
+      <title>Amazon Database Migration Service</title>
+      <link>http://localhost:1313/de-docs/de-basic/ingestion-tool/amazon-dms/</link>
+      <pubDate>Thu, 07 Sep 2023 16:06:50 +0200</pubDate>
+      <guid>http://localhost:1313/de-docs/de-basic/ingestion-tool/amazon-dms/</guid>
+      <description>&lt;style&gt;body {text-align: justify}&lt;/style&gt;&#xD;&#xA;&#xD;&#xA;&lt;img&#xD;&#xA;  srcset=&#34;data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAADwAwCdASoQABIAP1mKtkspJKKYBACTFYT2AFR6EfcHyH6pfkbTbfL0AP7gpuDCEvfMhRWjj/eW7L5sGeApyF4yFwW6yxhFxFECx8vuSfbz8YlTTqULcUmd9h4jxmdVKJCYxJ&amp;#43;Zwjj1YxCAAAA=&#34;&#xD;&#xA;      data-srcset=&#34;http://localhost:1313/de-docs/de-basic/ingestion-tool/aws-dms_hu_567cb72a459f0ad0.webp 197w&#34;&#xD;&#xA;      data-sizes=&#34;auto&#34;&#xD;&#xA;  src=&#34;http://localhost:1313/de-docs/de-basic/ingestion-tool/aws-dms_hu_c8c8b2899201d1a3.jpg&#34;&#xD;&#xA;  width=&#34;197&#34;&#xD;&#xA;  height=&#34;222&#34;&#xD;&#xA;  decoding=&#34;async&#34;&#xD;&#xA;  fetchpriority=&#34;auto&#34;&#xD;&#xA;  loading=&#34;lazy&#34;&#xD;&#xA;  alt=&#34;&#34;&#xD;&#xA;  class=&#34;lazyload blur-up center-image&#34;&#xD;&#xA;&gt;&#xA;&lt;p&gt;Một trong những trường hợp ingestion phổ biến là đồng bộ dữ liệu từ hệ thống database vào trong một analytic pipeline, hoặc đặt dữ liệu trong Amazon S3-based data lake hay trong data warehouse system như &lt;strong&gt;Amazon Redshift&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Data Management Architectures</title>
+      <link>http://localhost:1313/de-docs/de-basic/2-data-management-architecture/</link>
+      <pubDate>Thu, 07 Sep 2023 16:06:50 +0200</pubDate>
+      <guid>http://localhost:1313/de-docs/de-basic/2-data-management-architecture/</guid>
+      <description>&lt;style&gt;body {text-align: justify}&lt;/style&gt;&#xD;&#xA;&lt;h3 id=&#34;databases-và-data-warehouses&#34;&gt;Databases và Data Warehouses&lt;/h3&gt;&#xA;&lt;p&gt;Có 2 loại hệ thống cơ sở dữ liệu, và cả 2 đều được sử dụng cho rất nhiều năm:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Kho dữ liệu phân tán và xử lý dữ liệu song song</title>
@@ -24,60 +73,11 @@
       <description>&lt;style&gt;body {text-align: justify}&lt;/style&gt;&#xD;&#xA;&lt;p&gt;Chúng ta sẽ tìm hiểu kiến trúc của cụm &lt;strong&gt;Amazon Redshift&lt;/strong&gt;. Có rất nhiều loại node khác nhau trong Redshift, trong hình duới đây sẽ là cụm dựa trên &lt;strong&gt;RA3 nodes&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Columnar Data Storage</title>
-      <link>http://localhost:1313/de-docs/de-basic/datawarehouse/columnar-data-storage/</link>
+      <title>Amazon Kinesis for streaming data ingestion</title>
+      <link>http://localhost:1313/de-docs/de-basic/ingestion-tool/amazon-kinesis/</link>
       <pubDate>Thu, 07 Sep 2023 16:06:50 +0200</pubDate>
-      <guid>http://localhost:1313/de-docs/de-basic/datawarehouse/columnar-data-storage/</guid>
-      <description>&lt;style&gt;body {text-align: justify}&lt;/style&gt;&#xD;&#xA;&lt;p&gt;Một modern data warehouse còn được tăng hiệu suất thông qua việc lưu trữ &lt;strong&gt;column-oriented (hướng cột)&lt;/strong&gt; và &lt;strong&gt;data compression (nén dữ liệu)&lt;/strong&gt;.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Example Post</title>
-      <link>http://localhost:1313/blog/example-post/</link>
-      <pubDate>Mon, 20 Jan 2025 16:27:22 +0200</pubDate>
-      <guid>http://localhost:1313/blog/example-post/</guid>
-      <description>You can use blog posts for announcing product updates and features.</description>
-    </item>
-    <item>
-      <title>1. Giới thiệu về Data Engineer</title>
-      <link>http://localhost:1313/de-docs/de-basic/1-gioi-thieu-ve-de/</link>
-      <pubDate>Thu, 07 Sep 2023 16:06:50 +0200</pubDate>
-      <guid>http://localhost:1313/de-docs/de-basic/1-gioi-thieu-ve-de/</guid>
-      <description>&lt;style&gt;body {text-align: justify}&lt;/style&gt;&#xD;&#xA;&lt;h3 id=&#34;vai-trò-của-một-data-engineer&#34;&gt;Vai trò của một Data Engineer.&lt;/h3&gt;&#xA;&lt;p&gt;Vai trò của một &lt;strong&gt;data engineer&lt;/strong&gt; bao gồm:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Thiết kế, triển khai và giám sát pipelines có khả năng tích hợp những dữ liệu thô vào một kho lưu trữ.&lt;/li&gt;&#xA;&lt;li&gt;Chuyển đổi data để tối ưu cho việc phân tích, dựa trên &lt;strong&gt;yêu cầu&lt;/strong&gt; của người tiêu thụ data (&lt;strong&gt;Ví dụ: Data Analysis&lt;/strong&gt;)&lt;/li&gt;&#xA;&lt;li&gt;Khiến dữ liệu luôn sẵn sàng cho nhiều data consumers sử dụng các tool mà họ chọn.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Đồng thời DE cũng phải tuân thủ với tất cả những yêu cầu về bảo mật và pháp luật khi thực hiện các nhiệm vụ trên.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>2. Data Management Architectures</title>
-      <link>http://localhost:1313/de-docs/de-basic/2-data-management-architecture/</link>
-      <pubDate>Thu, 07 Sep 2023 16:06:50 +0200</pubDate>
-      <guid>http://localhost:1313/de-docs/de-basic/2-data-management-architecture/</guid>
-      <description>&lt;style&gt;body {text-align: justify}&lt;/style&gt;&#xD;&#xA;&lt;h3 id=&#34;databases-và-data-warehouses&#34;&gt;Databases và Data Warehouses&lt;/h3&gt;&#xA;&lt;p&gt;Có 2 loại hệ thống cơ sở dữ liệu, và cả 2 đều được sử dụng cho rất nhiều năm:&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>1. Giới thiệu về Spark</title>
-      <link>http://localhost:1313/de-docs/spark/khai-niem/</link>
-      <pubDate>Thu, 07 Sep 2023 16:04:48 +0200</pubDate>
-      <guid>http://localhost:1313/de-docs/spark/khai-niem/</guid>
-      <description>&lt;style&gt;body {text-align: justify}&lt;/style&gt;&#xD;&#xA;&lt;h3 id=&#34;spark-là-gì&#34;&gt;Spark là gì?&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;span style=&#34;color: orange; font-weight:bold;&#34;&gt;Apache Spark&lt;/span&gt; là một hệ thống xử lý dữ liệu phân tán mã nguồn mở và được sử dụng cho các công việc xử lý dữ liệu lớn.&lt;/li&gt;&#xA;&lt;li&gt;Có thể sử dụng trên: &lt;span style=&#34;color: orange; font-weight:bold;&#34;&gt;on premises&lt;/span&gt; hay &lt;span style=&#34;color: orange; font-weight:bold;&#34;&gt;trên cloud&lt;/span&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Spark sử dụng khả năng lưu trữ và xử lý dữ liệu trên bộ nhớ thay vì sử dụng ổ cứng (HDD/SSD).&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Làm tăng khả năng xử lý dữ liệu, khả năng xử lý nhanh hơn Hadoop MapReduce.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;span style=&#34;color: orange; font-weight:bold;&#34;&gt;Apache Spark&lt;/span&gt; cung cấp API phát triển bằng ngôn ngữ Python, Scala, Java. Có thể sử dụng cho việc:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Machine Learning (MLlib).&lt;/li&gt;&#xA;&lt;li&gt;Truy vấn, tương tác với dữ liệu (Spark SQL).&lt;/li&gt;&#xA;&lt;li&gt;Xử lý dữ liệu thời gian thực (Structured Streaming).&lt;/li&gt;&#xA;&lt;li&gt;Xử lý đồ thị (GraphX).&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Spark được thiết kế xung quanh 4 triết lý chính:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Tốc độ (Speed)&lt;/li&gt;&#xA;&lt;li&gt;Dễ sử dụng (Ease of use)&lt;/li&gt;&#xA;&lt;li&gt;Tính mô đun (Modularity)&lt;/li&gt;&#xA;&lt;li&gt;Khả năng mở rộng (Extensibility)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Spark có cộng đồng lớn và một danh sách các gói third-party Spark là một phần của sự phát triển của cộng đồng.&#xA;&lt;br&gt; &lt;br&gt;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;img&#xD;&#xA;  src=&#34;http://localhost:1313/de-docs/spark/images/spark-third-party_hu_842eb3a923965df8.webp&#34;&#xD;&#xA;  width=&#34;940&#34;&#xD;&#xA;  height=&#34;701&#34;&#xD;&#xA;  decoding=&#34;async&#34;&#xD;&#xA;  fetchpriority=&#34;auto&#34;&#xD;&#xA;  loading=&#34;lazy&#34;&#xD;&#xA;  alt=&#34;spark-third-party&#34;id=&#34;h-rh-i-0&#34;&#xD;&#xA;/&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <title>2. Thành phần của Spark</title>
-      <link>http://localhost:1313/de-docs/spark/thanh-phan-cua-spark/</link>
-      <pubDate>Thu, 07 Sep 2023 16:04:48 +0200</pubDate>
-      <guid>http://localhost:1313/de-docs/spark/thanh-phan-cua-spark/</guid>
-      <description>&lt;style&gt;body {text-align: justify}&lt;/style&gt;&#xD;&#xA;&lt;p&gt;&lt;br&gt;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;img&#xD;&#xA;  src=&#34;http://localhost:1313/de-docs/spark/images/spark-components_hu_15d87a9c5be03bb3.webp&#34;&#xD;&#xA;  width=&#34;1314&#34;&#xD;&#xA;  height=&#34;391&#34;&#xD;&#xA;  decoding=&#34;async&#34;&#xD;&#xA;  fetchpriority=&#34;auto&#34;&#xD;&#xA;  loading=&#34;lazy&#34;&#xD;&#xA;  alt=&#34;Spark Components&#34;id=&#34;h-rh-i-0&#34;&#xD;&#xA;/&gt;&lt;/p&gt;&#xA;&lt;p&gt;Spark bao gồm 5 thành phần chính: Spark Core, Spark SQL, Spark Streaming, MLlib và GraphX.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>3. Cách Spark hoạt động</title>
-      <link>http://localhost:1313/de-docs/spark/cach-hoat-dong/</link>
-      <pubDate>Thu, 07 Sep 2023 16:04:48 +0200</pubDate>
-      <guid>http://localhost:1313/de-docs/spark/cach-hoat-dong/</guid>
-      <description>&lt;style&gt;body {text-align: justify}&lt;/style&gt;&#xD;&#xA;&lt;p&gt;Hãy bắt đầu bằng cách nhìn từng thành phần của Spark trong ảnh.&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;img&#xD;&#xA;  src=&#34;http://localhost:1313/de-docs/spark/images/architecture_hu_3d09a1ec182b9465.webp&#34;&#xD;&#xA;  width=&#34;724&#34;&#xD;&#xA;  height=&#34;372&#34;&#xD;&#xA;  decoding=&#34;async&#34;&#xD;&#xA;  fetchpriority=&#34;auto&#34;&#xD;&#xA;  loading=&#34;lazy&#34;&#xD;&#xA;  alt=&#34;Architecture&#34;id=&#34;h-rh-i-0&#34;&#xD;&#xA;/&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;spark-driver&#34;&gt;Spark Driver&lt;/h3&gt;&#xA;&lt;p&gt;Là một phần của Spark application chịu trách nhiệm cho việc khởi tạo SparkSession.&#xA;Spark Driver có nhiều vai trò như:&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>4. Các khái niệm Spark Application</title>
-      <link>http://localhost:1313/de-docs/spark/spark-application-concept/</link>
-      <pubDate>Thu, 07 Sep 2023 16:04:48 +0200</pubDate>
-      <guid>http://localhost:1313/de-docs/spark/spark-application-concept/</guid>
-      <description>&lt;style&gt;body {text-align: justify}&lt;/style&gt;&#xD;&#xA;&lt;h3 id=&#34;một-số-khái-niệm-cần-biết&#34;&gt;Một số khái niệm cần biết:&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;&lt;em&gt;Application:&lt;/em&gt;&lt;/strong&gt;&#xA;&lt;br&gt;&#xA;Một chương trình người dùng được xây dựng trên Spark và sử dụng API của nó. Bao gồm chương trình điều khiển (driver program) và executors trong cụm.&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;strong&gt;&lt;em&gt;SparkSession&lt;/em&gt;&lt;/strong&gt;&#xA;&lt;br&gt;&#xA;Một đối tượng cung cấp điểm vào để tương tác với các chức năng của Spark.&#xA;Trong Spark Shell đã cung cấp sẵn SparkSession cho bạn nhưng trong Spark Application, bạn phải tự tạo SparkSession riêng.&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;strong&gt;&lt;em&gt;Job&lt;/em&gt;&lt;/strong&gt;&#xA;&lt;br&gt;&#xA;Một chương chình tính toán song song bao gồm nhiều tác vụ được tạo ra để phản hồi cho một Spark action (ví dụ: save(), collect())&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;strong&gt;&lt;em&gt;Stage&lt;/em&gt;&lt;/strong&gt;&#xA;&lt;br&gt;&#xA;Mỗi job được phân chia thành các tác vụ nhỏ hơn được gọi là stages, chúng phụ thuộc lẫn nhau.&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;strong&gt;&lt;em&gt;Task&lt;/em&gt;&lt;/strong&gt;&#xA;&lt;br&gt;&#xA;Một đơn vị công việc (work) hay thực thi (executor) được gửi cho Spark Executor.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/de-docs/de-basic/ingestion-tool/amazon-kinesis/</guid>
+      <description>&lt;style&gt;body {text-align: justify}&lt;/style&gt;&#xD;&#xA;&lt;p&gt;&lt;strong&gt;Amazon Kinesis&lt;/strong&gt; là một dịch vụ được quản lý để đơn giản hóa quy trình ingesting và xử lý streaming data trong thời gian thực, hoặc gần thực.&#xA;Có nhiều trường hợp Kinesis có thể sử dụng, bao gồm ingestion dữ liệu streaming (như log files, website clickstreams, hay IoT data), cũng như là video và audio streams.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
